@@ -94,6 +94,24 @@ select:focus { border-color: var(--accent); }
 }
 .progress-badge strong { color: var(--ok); }
 
+.btn-yt {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #ff0000;
+  color: #fff;
+  border: none;
+  padding: 7px 14px;
+  border-radius: var(--r);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  transition: opacity .15s, transform .1s;
+}
+.btn-yt:hover { opacity: .9; transform: translateY(-1px); }
+
 .btn-primary {
   background: var(--accent);
   color: #0d1117;
@@ -335,6 +353,10 @@ select:focus { border-color: var(--accent); }
     <div class="progress-badge">
       <strong id="progress-num">0</strong> / 25 odkrytych
     </div>
+    <a id="yt-link" href="#" target="_blank" rel="noopener" class="btn-yt" style="display:none">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
+      Odcinek
+    </a>
     <button class="btn-primary" id="play-btn">&#8635; Zagraj jeszcze raz</button>
   </div>
 </header>
@@ -362,14 +384,16 @@ const ROWS  = 5;
 const TOTAL = COLS * ROWS;  // 25
 
 /* ── Stan gry ── */
-let vocabulary   = [];
-let imageList    = [];
-let currentImage = '';
-let solvedCount  = 0;
+let vocabulary    = [];
+let imageList     = [];
+let episodeLinks  = {};
+let currentImage  = '';
+let solvedCount   = 0;
 
 /* ── Elementy DOM ── */
 const boardEl        = document.getElementById('game-board');
 const episodeSel     = document.getElementById('episode-select');
+const ytLink         = document.getElementById('yt-link');
 const playBtn        = document.getElementById('play-btn');
 const progressNum    = document.getElementById('progress-num');
 const statusMsg      = document.getElementById('status-msg');
@@ -392,8 +416,9 @@ async function init() {
       }),
     ]);
 
-    vocabulary = parseCSV(csvText);
-    imageList  = manifest.images || [];
+    vocabulary   = parseCSV(csvText);
+    imageList    = manifest.images   || [];
+    episodeLinks = manifest.episodes || {};
 
     if (!vocabulary.length) throw new Error('Plik CSV jest pusty lub ma nieprawidłowy format.');
     if (!imageList.length)  throw new Error('Brak obrazków w images/manifest.json.');
@@ -460,6 +485,14 @@ function startGame() {
   }
 
   hideStatus();
+
+  const ytUrl = episodeLinks[episode];
+  if (ytUrl) {
+    ytLink.href = ytUrl;
+    ytLink.style.display = 'flex';
+  } else {
+    ytLink.style.display = 'none';
+  }
 
   const words    = shuffle(pool).slice(0, TOTAL);
   const imgFile  = imageList[Math.floor(Math.random() * imageList.length)];

@@ -1,5 +1,11 @@
 {
   "images": [
-    "gosia1.png"
-  ]
+    "gosia1.png",
+    "gosia2.png"
+  ],
+  "episodes": {
+    "1": "https://www.youtube.com/watch?v=6L-zHNdy288&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=216",
+    "2": "https://www.youtube.com/watch?v=DDjWTWHHkpk&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=213"
+
+  }
 }
