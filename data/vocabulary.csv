@@ -1,0 +1,182 @@
+# Format: oryginał;tłumaczenie;epizod
+# Linie zaczynające się od # są ignorowane.
+# Każdy epizod powinien zawierać co najmniej 25 haseł.
+
+# ── Epizod 1: Dom i rodzina ──────────────────────────────────────
+free-range pork;wieprzowina z wolnego wybiegu;1
+seasoning;przyprawa / mieszanka przypraw;1
+pastry;ciasto (np. kruche do wypieków);1
+batter;ciasto płynne (np. naleśnikowe);1
+to bake;piec (w piekarniku);1
+attractions;atrakcje turystyczne;1
+minster;katedra (historyczna nazwa, np. York Minster);1
+Viking Centre;centrum wikingów (muzeum/atrakcja);1
+originate from;pochodzić z;1
+rename;zmienić nazwę;1
+Anglo-Saxons;Anglosasi;1
+Roman times;czasy rzymskie;1
+identity;tożsamość;1
+independence;niezależność;1
+approachable;łatwy w kontakcie / przystępny;1
+homely;przytulny (brit.);1
+welcoming;gościnny;1
+accepting of;akceptujący wobec;1
+diverse history;różnorodna historia;1
+historical figure;postać historyczna;1
+traditional;tradycyjny;1
+architecture;architektura;1
+surroundings;otoczenie;1
+atmosphere;atmosfera;1
+attached to (a place);przywiązać się do (miejsca);1
+A perfect Yorkshire pork pie requires high-quality ingredients.;Idealny Yorkshire pork pie wymaga wysokiej jakości składników.;1
+We use free-range pork and prepare our own seasoning and pastry.;Używamy wieprzowiny z wolnego wybiegu i przygotowujemy własne przyprawy oraz ciasto.;1
+That is why our pork pies are considered some of the best in York.;Dlatego nasze pork pie są uważane za jedne z najlepszych w Yorku.;1
+Yorkshire pudding is made from a simple batter baked in the oven.;Yorkshire pudding powstaje z prostego ciasta pieczonego w piekarniku.;1
+There are many attractions in York, including the Shambles and York Minster.;W Yorku jest wiele atrakcji, w tym Shambles i York Minster.;1
+There used to be a Viking Centre in the city.;W mieście kiedyś znajdowało się Centrum Wikingów.;1
+There are no Vikings in cities like London or Oxford.;W miastach takich jak Londyn czy Oksford nie ma wikingów.;1
+During Roman times, the city was known as Eboracum.;W czasach rzymskich miasto było znane jako Eboracum.;1
+The Anglo-Saxons later called it Eoforwic.;Anglosasi później nazwali je Eoforwic.;1
+The Vikings changed the name to Jorvik.;Wikingowie zmienili nazwę na Jorvik.;1
+The modern name York originates from the Viking name Jorvik.;Współczesna nazwa York pochodzi od wikińskiej nazwy Jorvik.;1
+People from York are proud of being from Yorkshire.;Ludzie z Yorku są dumni z bycia z Yorkshire.;1
+They value independence and taking care of their families.;Cenią niezależność i dbanie o swoje rodziny.;1
+Most people in York are friendly and approachable.;Większość ludzi w Yorku jest przyjazna i otwarta.;1
+The city has a warm and homely atmosphere.;Miasto ma ciepłą i przytulną atmosferę.;1
+Many people are helpful and often smile.;Wiele osób jest pomocnych i często się uśmiecha.;1
+Some people feel that York is not always accepting of those who are different.;Niektórzy uważają, że York nie zawsze jest otwarty na osoby inne.;1
+York has a rich and diverse history.;York ma bogatą i różnorodną historię.;1
+Many historical figures, including Guy Fawkes, are connected to the city.;Wielu historycznych ludzi, w tym Guy Fawkes, jest związanych z miastem.;1
+York can be described as a traditional English city.;York można opisać jako tradycyjne angielskie miasto.;1
+The city is known for its stone buildings and historic character.;Miasto słynie z kamiennych budynków i historycznego charakteru.;1
+It is also famous for its pubs and good beer.;Jest również znane z pubów i dobrego piwa.;1
+York offers beautiful surroundings and a unique atmosphere.;York oferuje piękne otoczenie i wyjątkową atmosferę.;1
+Visitors often feel comfortable and quickly become attached to the city.;Odwiedzający często czują się komfortowo i szybko przywiązują się do miasta.;1
+
+# ── Epizod 2: Jedzenie i napoje ─────────────────────────────────
+apple;jabłko;2
+banana;banan;2
+orange;pomarańcza;2
+strawberry;truskawka;2
+grape;winogrono;2
+bread;chleb;2
+butter;masło;2
+cheese;ser;2
+egg;jajko;2
+milk;mleko;2
+water;woda;2
+juice;sok;2
+coffee;kawa;2
+tea;herbata;2
+sugar;cukier;2
+salt;sól;2
+pepper;pieprz;2
+rice;ryż;2
+pasta;makaron;2
+soup;zupa;2
+salad;sałatka;2
+chicken;kurczak;2
+fish;ryba;2
+cake;ciasto;2
+chocolate;czekolada;2
+ice cream;lody;2
+fork;widelec;2
+knife;nóż;2
+spoon;łyżka;2
+plate;talerz;2
+
+# ── Epizod 3: Natura i pogoda ────────────────────────────────────
+sun;słońce;3
+moon;księżyc;3
+star;gwiazda;3
+cloud;chmura;3
+rain;deszcz;3
+snow;śnieg;3
+wind;wiatr;3
+storm;burza;3
+thunder;grzmot;3
+lightning;błyskawica;3
+river;rzeka;3
+lake;jezioro;3
+sea;morze;3
+mountain;góra;3
+forest;las;3
+tree;drzewo;3
+flower;kwiat;3
+grass;trawa;3
+stone;kamień;3
+sand;piasek;3
+fire;ogień;3
+ice;lód;3
+fog;mgła;3
+rainbow;tęcza;3
+island;wyspa;3
+valley;dolina;3
+desert;pustynia;3
+cave;jaskinia;3
+waterfall;wodospad;3
+bird;ptak;3
+
+# ── Epizod 4: Miasto i transport ─────────────────────────────────
+city;miasto;4
+street;ulica;4
+road;droga;4
+bridge;most;4
+park;park;4
+school;szkoła;4
+hospital;szpital;4
+library;biblioteka;4
+museum;muzeum;4
+shop;sklep;4
+restaurant;restauracja;4
+hotel;hotel;4
+bank;bank;4
+church;kościół;4
+station;dworzec;4
+airport;lotnisko;4
+car;samochód;4
+bus;autobus;4
+train;pociąg;4
+bicycle;rower;4
+motorcycle;motocykl;4
+taxi;taksówka;4
+boat;łódź;4
+plane;samolot;4
+ticket;bilet;4
+map;mapa;4
+crossroads;skrzyżowanie;4
+pavement;chodnik;4
+tunnel;tunel;4
+traffic;ruch uliczny;4
+
+# ── Epizod 5: Ludzie i emocje ────────────────────────────────────
+man;mężczyzna;5
+woman;kobieta;5
+child;dziecko;5
+boy;chłopiec;5
+girl;dziewczynka;5
+baby;niemowlę;5
+friend;przyjaciel;5
+family;rodzina;5
+love;miłość;5
+happiness;szczęście;5
+sadness;smutek;5
+anger;złość;5
+fear;strach;5
+hope;nadzieja;5
+dream;marzenie;5
+memory;wspomnienie;5
+smile;uśmiech;5
+laugh;śmiech;5
+cry;płakać;5
+hug;przytulenie;5
+kiss;pocałunek;5
+look;spojrzenie;5
+listen;słuchać;5
+speak;mówić;5
+think;myśleć;5
+feel;czuć;5
+understand;rozumieć;5
+help;pomóc;5
+trust;zaufanie;5
+courage;odwaga;5

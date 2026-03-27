@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#0a0a2e"/>
+      <stop offset="45%"  stop-color="#c0392b"/>
+      <stop offset="70%"  stop-color="#e67e22"/>
+      <stop offset="100%" stop-color="#f1c40f"/>
+    </linearGradient>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#f39c12" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#1a5276"/>
+    </linearGradient>
+    <linearGradient id="hill1" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#1d6a34"/>
+      <stop offset="100%" stop-color="#0b3d1e"/>
+    </linearGradient>
+    <linearGradient id="hill2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#145a32"/>
+      <stop offset="100%" stop-color="#0b3d1e"/>
+    </linearGradient>
+    <radialGradient id="sun" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#fff7aa"/>
+      <stop offset="60%"  stop-color="#f1c40f"/>
+      <stop offset="100%" stop-color="#e67e22" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="800" height="600" fill="url(#sky)"/>
+
+  <!-- Sun glow halo -->
+  <circle cx="400" cy="370" r="110" fill="#f39c12" opacity=".18" filter="url(#glow)"/>
+
+  <!-- Sun -->
+  <circle cx="400" cy="370" r="55" fill="url(#sun)" filter="url(#glow)"/>
+
+  <!-- Horizon water reflection -->
+  <rect x="0" y="400" width="800" height="200" fill="url(#water)"/>
+
+  <!-- Sun reflection on water -->
+  <ellipse cx="400" cy="490" rx="30" ry="80" fill="#f1c40f" opacity=".35"/>
+  <ellipse cx="400" cy="540" rx="18" ry="40" fill="#f1c40f" opacity=".2"/>
+
+  <!-- Far mountains -->
+  <polygon points="0,400 120,230 240,400"   fill="#1a3a4a" opacity=".65"/>
+  <polygon points="150,400 310,180 470,400" fill="#1d4e6e" opacity=".6"/>
+  <polygon points="370,400 530,200 690,400" fill="#1a3a4a" opacity=".65"/>
+  <polygon points="600,400 730,250 800,400" fill="#1d4e6e" opacity=".55"/>
+
+  <!-- Near hills -->
+  <ellipse cx="160" cy="420" rx="220" ry="80" fill="url(#hill1)"/>
+  <ellipse cx="640" cy="420" rx="220" ry="80" fill="url(#hill2)"/>
+
+  <!-- Trees left -->
+  <rect x="55"  y="355" width="8"  height="55" fill="#0b3d1e"/>
+  <polygon points="59,310 35,370 83,370"  fill="#1d6a34"/>
+  <polygon points="59,330 40,380 78,380"  fill="#239b56"/>
+
+  <rect x="105" y="360" width="7"  height="50" fill="#0b3d1e"/>
+  <polygon points="108,318 86,372 130,372" fill="#1d6a34"/>
+  <polygon points="108,336 90,380 126,380" fill="#239b56"/>
+
+  <rect x="145" y="362" width="7"  height="48" fill="#0b3d1e"/>
+  <polygon points="148,322 127,374 169,374" fill="#1d6a34"/>
+
+  <!-- Trees right -->
+  <rect x="645" y="355" width="8"  height="55" fill="#0b3d1e"/>
+  <polygon points="649,310 625,370 673,370"  fill="#1d6a34"/>
+  <polygon points="649,330 630,380 668,380"  fill="#239b56"/>
+
+  <rect x="695" y="360" width="7"  height="50" fill="#0b3d1e"/>
+  <polygon points="698,318 676,372 720,372" fill="#1d6a34"/>
+  <polygon points="698,336 680,380 716,380" fill="#239b56"/>
+
+  <rect x="735" y="362" width="7"  height="48" fill="#0b3d1e"/>
+  <polygon points="738,322 717,374 759,374" fill="#1d6a34"/>
+
+  <!-- Stars (scattered) -->
+  <circle cx="80"  cy="55"  r="1.8" fill="white" opacity=".9"/>
+  <circle cx="160" cy="30"  r="1.2" fill="white" opacity=".7"/>
+  <circle cx="240" cy="70"  r="2"   fill="white" opacity=".85"/>
+  <circle cx="310" cy="20"  r="1.5" fill="white" opacity=".6"/>
+  <circle cx="390" cy="50"  r="1"   fill="white" opacity=".75"/>
+  <circle cx="470" cy="35"  r="1.8" fill="white" opacity=".8"/>
+  <circle cx="560" cy="65"  r="1.3" fill="white" opacity=".65"/>
+  <circle cx="630" cy="25"  r="2"   fill="white" opacity=".9"/>
+  <circle cx="720" cy="55"  r="1.5" fill="white" opacity=".7"/>
+  <circle cx="775" cy="90"  r="1"   fill="white" opacity=".6"/>
+  <circle cx="50"  cy="120" r="1.2" fill="white" opacity=".5"/>
+  <circle cx="200" cy="110" r="1.5" fill="white" opacity=".6"/>
+  <circle cx="500" cy="100" r="1"   fill="white" opacity=".55"/>
+  <circle cx="700" cy="130" r="1.8" fill="white" opacity=".65"/>
+
+  <!-- Small boat silhouette -->
+  <polygon points="355,395 445,395 435,410 365,410" fill="#0b2a3a" opacity=".7"/>
+  <rect x="398" y="360" width="3" height="36" fill="#0b2a3a" opacity=".7"/>
+  <polygon points="401,362 401,390 430,380" fill="#c0392b" opacity=".5"/>
+
+  <!-- Foreground ground strip -->
+  <rect x="0" y="410" width="800" height="20" fill="#0b3d1e" opacity=".8"/>
+</svg>

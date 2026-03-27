@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlashCards – Nauka Języków</title>
+<style>
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg:          #0d1117;
+  --surface:     #161b22;
+  --border:      #30363d;
+  --accent:      #58a6ff;
+  --ok:          #3fb950;
+  --wrong:       #f85149;
+  --text:        #e6edf3;
+  --muted:       #8b949e;
+  --card-bg:     #1f2937;
+  --card-border: #374151;
+  --r:           8px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  user-select: none;
+}
+
+/* ── Header ─────────────────────────────────────── */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  letter-spacing: 0.5px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.episode-label {
+  font-size: 0.85rem;
+  color: var(--muted);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+select {
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 5px 10px;
+  border-radius: var(--r);
+  font-size: 0.85rem;
+  cursor: pointer;
+  outline: none;
+}
+select:focus { border-color: var(--accent); }
+
+.progress-badge {
+  font-size: 0.8rem;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 4px 12px;
+  white-space: nowrap;
+}
+.progress-badge strong { color: var(--ok); }
+
+.btn-primary {
+  background: var(--accent);
+  color: #0d1117;
+  border: none;
+  padding: 7px 16px;
+  border-radius: var(--r);
+  font-size: 0.85rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity .15s, transform .1s;
+  white-space: nowrap;
+}
+.btn-primary:hover  { opacity: .9; transform: translateY(-1px); }
+.btn-primary:active { transform: translateY(0); }
+
+/* ── Game area ───────────────────────────────────── */
+.game-area {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 4px;
+}
+
+/* ── Card ────────────────────────────────────────── */
+.card {
+  perspective: 1200px;
+  cursor: pointer;
+  min-width: 0;
+  min-height: 0;
+}
+.card[data-state="flipped"],
+.card[data-state="solved"] {
+  cursor: default;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform .5s cubic-bezier(.4,0,.2,1);
+  border-radius: var(--r);
+}
+
+/* Flipped = back face is visible */
+.card[data-state="flipped"] .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 6px;
+}
+
+/* Front face — default state */
+.card-front {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  transition: border-color .2s;
+}
+.card:not([data-state="flipped"]):not([data-state="solved"]):hover .card-front {
+  border-color: var(--accent);
+}
+/* Solved: image tile fills the front */
+.card[data-state="solved"] .card-front {
+  background-color: #000;   /* fallback while img loads */
+  border-color: rgba(255,255,255,.15);
+  /* background-image / background-size / background-position set via JS */
+}
+
+/* Polish translation on front */
+.card-face {
+  container-type: size;
+}
+.card-translation {
+  font-size: clamp(.4rem, 9cqw, 1rem);
+  font-weight: 600;
+  text-align: center;
+  color: var(--accent);
+  line-height: 1.35;
+  opacity: 0;
+  transition: opacity .2s;
+  padding: 4px;
+  word-break: break-word;
+  hyphens: auto;
+}
+.card[data-state="peeking"] .card-translation { opacity: 1; }
+
+/* Back face — original word + buttons */
+.card-back {
+  background: var(--surface);
+  border: 1px solid var(--accent);
+  transform: rotateY(180deg);
+  gap: 4px;
+}
+
+.card-original {
+  font-size: clamp(.4rem, 9cqw, 1.05rem);
+  font-weight: 700;
+  text-align: center;
+  color: var(--text);
+  line-height: 1.3;
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.card-buttons {
+  display: flex;
+  gap: clamp(4px, 1.2vmin, 10px);
+  margin-top: 4px;
+}
+
+.btn-ok,
+.btn-wrong {
+  width:  clamp(26px, 4.5vmin, 44px);
+  height: clamp(26px, 4.5vmin, 44px);
+  border: none;
+  border-radius: 50%;
+  font-size: clamp(.85rem, 2.5vmin, 1.3rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform .15s, filter .15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+.btn-ok    { background: var(--ok);    color: #0d1117; }
+.btn-wrong { background: var(--wrong); color: #fff; }
+.btn-ok:hover,
+.btn-wrong:hover { transform: scale(1.2); filter: brightness(1.15); }
+
+/* ── Victory overlay ─────────────────────────────── */
+#victory-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  background: rgba(0,0,0,.8);
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(6px);
+}
+#victory-overlay.show { display: flex; }
+
+.victory-card {
+  background: var(--surface);
+  border: 2px solid var(--accent);
+  border-radius: 16px;
+  padding: 36px 48px;
+  text-align: center;
+  max-width: 480px;
+  width: 90%;
+  animation: bounceIn .5s cubic-bezier(.34,1.56,.64,1) both;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+}
+.victory-img {
+  width: 260px;
+  height: auto;
+  max-height: 180px;
+  object-fit: cover;
+  border-radius: var(--r);
+  border: 2px solid var(--border);
+}
+.victory-title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+.victory-sub {
+  font-size: .95rem;
+  color: var(--muted);
+}
+
+@keyframes bounceIn {
+  from { opacity: 0; transform: scale(.4); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+/* ── Status / error msg ──────────────────────────── */
+#status-msg {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  padding: 24px 32px;
+  font-size: .95rem;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.8;
+  max-width: 480px;
+  width: 90%;
+  display: none;
+}
+#status-msg.show { display: block; }
+#status-msg strong { color: var(--wrong); }
+#status-msg code {
+  background: var(--bg);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-size: .85em;
+  color: var(--accent);
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">FlashCards</div>
+  <div class="controls">
+    <label class="episode-label">
+      Epizod:
+      <select id="episode-select"></select>
+    </label>
+    <div class="progress-badge">
+      <strong id="progress-num">0</strong> / 25 odkrytych
+    </div>
+    <button class="btn-primary" id="play-btn">&#8635; Zagraj jeszcze raz</button>
+  </div>
+</header>
+
+<div class="game-area">
+  <div id="game-board"></div>
+  <div id="status-msg"></div>
+</div>
+
+<div id="victory-overlay">
+  <div class="victory-card">
+    <img class="victory-img" id="victory-img" src="" alt="Odkryty obrazek">
+    <div class="victory-title">Brawo!</div>
+    <div class="victory-sub">Odkryłeś cały obrazek — swietna robota!</div>
+    <button class="btn-primary" id="victory-play-btn">&#8635; Zagraj jeszcze raz</button>
+  </div>
+</div>
+
+<script>
+'use strict';
+
+/* ── Stałe ── */
+const COLS  = 5;
+const ROWS  = 5;
+const TOTAL = COLS * ROWS;  // 25
+
+/* ── Stan gry ── */
+let vocabulary   = [];
+let imageList    = [];
+let currentImage = '';
+let solvedCount  = 0;
+
+/* ── Elementy DOM ── */
+const boardEl        = document.getElementById('game-board');
+const episodeSel     = document.getElementById('episode-select');
+const playBtn        = document.getElementById('play-btn');
+const progressNum    = document.getElementById('progress-num');
+const statusMsg      = document.getElementById('status-msg');
+const victoryOverlay = document.getElementById('victory-overlay');
+const victoryImg     = document.getElementById('victory-img');
+const victoryPlayBtn = document.getElementById('victory-play-btn');
+
+/* ── Inicjalizacja ── */
+async function init() {
+  showStatus('Ładowanie danych…');
+  try {
+    const [csvText, manifest] = await Promise.all([
+      fetch('data/vocabulary.csv').then(r => {
+        if (!r.ok) throw new Error(`Nie można pobrać vocabulary.csv (HTTP ${r.status})`);
+        return r.text();
+      }),
+      fetch('images/manifest.json').then(r => {
+        if (!r.ok) throw new Error(`Nie można pobrać images/manifest.json (HTTP ${r.status})`);
+        return r.json();
+      }),
+    ]);
+
+    vocabulary = parseCSV(csvText);
+    imageList  = manifest.images || [];
+
+    if (!vocabulary.length) throw new Error('Plik CSV jest pusty lub ma nieprawidłowy format.');
+    if (!imageList.length)  throw new Error('Brak obrazków w images/manifest.json.');
+
+    hideStatus();
+    populateEpisodes();
+    startGame();
+  } catch (err) {
+    showStatus(
+      `<strong>Błąd ładowania danych:</strong><br>${err.message}<br><br>
+       Aplikację należy uruchomić przez lokalny serwer HTTP, np.:<br>
+       <code>python3 -m http.server</code><br>
+       lub użyj rozszerzenia <em>Live Server</em> w VS&nbsp;Code.`
+    );
+  }
+}
+
+/* ── Parsowanie CSV (format: oryginał;tłumaczenie;epizod) ── */
+function parseCSV(text) {
+  return text
+    .split('\n')
+    .map(l => l.trim())
+    .filter(l => l && !l.startsWith('#'))
+    .map(l => {
+      const [original = '', translation = '', episode = ''] = l.split(';').map(s => s.trim());
+      return { original, translation, episode };
+    })
+    .filter(v => v.original && v.translation && v.episode);
+}
+
+/* ── Selector epizodów ── */
+function populateEpisodes() {
+  const episodes = [...new Set(vocabulary.map(v => v.episode))]
+    .sort((a, b) => {
+      const na = parseFloat(a), nb = parseFloat(b);
+      return (!isNaN(na) && !isNaN(nb)) ? na - nb : a.localeCompare(b);
+    });
+
+  episodeSel.innerHTML = '';
+  for (const ep of episodes) {
+    const opt = document.createElement('option');
+    opt.value = ep;
+    opt.textContent = `Epizod ${ep}`;
+    episodeSel.appendChild(opt);
+  }
+}
+
+/* ── Start / reset gry ── */
+function startGame() {
+  victoryOverlay.classList.remove('show');
+  solvedCount = 0;
+  updateProgress();
+
+  const episode = episodeSel.value;
+  const pool    = vocabulary.filter(v => v.episode === episode);
+
+  if (pool.length < TOTAL) {
+    showStatus(
+      `Epizod <strong>${episode}</strong> zawiera tylko <strong>${pool.length}</strong> haseł.<br>
+       Do gry potrzeba co najmniej ${TOTAL}. Uzupełnij plik <code>data/vocabulary.csv</code>.`
+    );
+    boardEl.innerHTML = '';
+    return;
+  }
+
+  hideStatus();
+
+  const words    = shuffle(pool).slice(0, TOTAL);
+  const imgFile  = imageList[Math.floor(Math.random() * imageList.length)];
+  currentImage   = `images/${imgFile}`;
+
+  /* Załaduj obrazek aby poznać proporcje przed wyrenderowaniem grida */
+  const probe = new Image();
+  probe.onload = () => {
+    fitBoard(probe.naturalWidth, probe.naturalHeight);
+    renderBoard(words);
+  };
+  probe.onerror = () => {
+    fitBoard(1, 1);
+    renderBoard(words);
+  };
+  probe.src = currentImage;
+}
+
+/* ── Dopasowanie rozmiaru planszy (object-fit: contain) ── */
+function fitBoard(imgW, imgH) {
+  const area    = boardEl.parentElement;
+  const padding = 20;
+  const availW  = area.clientWidth  - padding;
+  const availH  = area.clientHeight - padding;
+  const scale   = Math.min(availW / imgW, availH / imgH);
+  boardEl.style.width  = Math.floor(imgW * scale) + 'px';
+  boardEl.style.height = Math.floor(imgH * scale) + 'px';
+}
+
+/* ── Auto-fit tekstu w karcie ── */
+function fitText(el) {
+  const face = el.closest('.card-face');
+  if (!face) return;
+  let size = parseFloat(getComputedStyle(el).fontSize);
+  const minPx = 7;
+  while (size > minPx && face.scrollHeight > face.clientHeight) {
+    size -= 0.5;
+    el.style.fontSize = size + 'px';
+  }
+}
+
+/* ── Renderowanie planszy ── */
+function renderBoard(words) {
+  boardEl.innerHTML = '';
+  words.forEach((word, idx) => {
+    const row = Math.floor(idx / COLS);
+    const col = idx % COLS;
+    boardEl.appendChild(makeCard(word, row, col));
+  });
+  requestAnimationFrame(() => {
+    boardEl.querySelectorAll('.card-translation, .card-original').forEach(fitText);
+  });
+}
+
+/* ── Tworzenie pojedynczej karty ── */
+function makeCard({ original, translation }, row, col) {
+  const card  = document.createElement('div');
+  card.className   = 'card';
+  card.dataset.state = 'hidden';
+
+  const inner = document.createElement('div');
+  inner.className  = 'card-inner';
+
+  /* --- Przód: polskie tłumaczenie --- */
+  const front   = document.createElement('div');
+  front.className  = 'card-face card-front';
+  const transEl = document.createElement('div');
+  transEl.className = 'card-translation';
+  transEl.textContent = translation;
+  front.appendChild(transEl);
+
+  /* --- Tył: oryginał + przyciski --- */
+  const back    = document.createElement('div');
+  back.className   = 'card-face card-back';
+
+  const origEl  = document.createElement('div');
+  origEl.className = 'card-original';
+  origEl.textContent = original;
+
+  const btns    = document.createElement('div');
+  btns.className   = 'card-buttons';
+
+  const okBtn    = makeBtn('✓', 'btn-ok',    'Wiedziałem!');
+  const wrongBtn = makeBtn('✗', 'btn-wrong', 'Nie wiedziałem');
+  btns.append(okBtn, wrongBtn);
+  back.append(origEl, btns);
+
+  inner.append(front, back);
+  card.appendChild(inner);
+
+  /* --- Obsługa kliknięć karty --- */
+  card.addEventListener('click', () => {
+    const s = card.dataset.state;
+    if      (s === 'hidden')  card.dataset.state = 'peeking';   // 1. klik → pokaż tłumaczenie
+    else if (s === 'peeking') card.dataset.state = 'flipped';   // 2. klik → obróć kartę
+    // flipped i solved: karta nieaktywna (obsługują własne przyciski)
+  });
+
+  /* OK → odsłoń fragment obrazka */
+  okBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    revealFragment(card, front, row, col);
+  });
+
+  /* X → wróć do stanu wyjściowego */
+  wrongBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    card.dataset.state = 'hidden';
+  });
+
+  return card;
+}
+
+function makeBtn(text, cls, title) {
+  const el = document.createElement('button');
+  el.className   = cls;
+  el.textContent = text;
+  el.title       = title;
+  return el;
+}
+
+/* ── Odsłonięcie fragmentu obrazka ── */
+function revealFragment(card, frontFace, row, col) {
+  /* Pozycja procentowa dla danego kafelka (0–100 %) */
+  const px = (col / (COLS - 1)) * 100;   // 0 25 50 75 100
+  const py = (row / (ROWS - 1)) * 100;   // 0 25 50 75 100
+
+  /*
+   * background-size: 500% 500%  → cały obraz jest 5× większy niż kafelek
+   * background-position: px% py% → pokazuje właściwy wycinek
+   *
+   * Zmiana jest niewidoczna dopóki karta jest obrócona (backface-visibility:hidden),
+   * więc animacja powrotu do pozycji 0° odsłoni obraz płynnie.
+   */
+  Object.assign(frontFace.style, {
+    backgroundImage:    `url('${currentImage}')`,
+    backgroundSize:     `${COLS * 100}% ${ROWS * 100}%`,
+    backgroundPosition: `${px}% ${py}%`,
+    backgroundColor:    'transparent',
+  });
+
+  card.dataset.state = 'solved';   // obrót powrotny ← CSS
+  solvedCount++;
+  updateProgress();
+
+  if (solvedCount === TOTAL) {
+    setTimeout(() => {
+      victoryImg.src = currentImage;
+      victoryOverlay.classList.add('show');
+    }, 700);
+  }
+}
+
+/* ── Narzędzia ── */
+function shuffle(arr) {
+  const a = [...arr];
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+function updateProgress() {
+  progressNum.textContent = solvedCount;
+}
+
+function showStatus(html) {
+  statusMsg.innerHTML = html;
+  statusMsg.classList.add('show');
+}
+
+function hideStatus() {
+  statusMsg.classList.remove('show');
+}
+
+/* ── Zdarzenia kontrolek ── */
+playBtn.addEventListener('click', startGame);
+victoryPlayBtn.addEventListener('click', startGame);
+episodeSel.addEventListener('change', startGame);
+
+/* ── Start ── */
+init();
+</script>
+</body>
+</html>
