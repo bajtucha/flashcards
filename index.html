@@ -140,7 +140,7 @@ select:focus { border-color: var(--accent); }
 
 #game-board {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
   gap: 4px;
 }
@@ -351,7 +351,7 @@ select:focus { border-color: var(--accent); }
       <select id="episode-select"></select>
     </label>
     <div class="progress-badge">
-      <strong id="progress-num">0</strong> / 25 odkrytych
+      <strong id="progress-num">0</strong> / 20 odkrytych
     </div>
     <a id="yt-link" href="#" target="_blank" rel="noopener" class="btn-yt" style="display:none">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
@@ -379,9 +379,9 @@ select:focus { border-color: var(--accent); }
 'use strict';
 
 /* ── Stałe ── */
-const COLS  = 5;
+const COLS  = 4;
 const ROWS  = 5;
-const TOTAL = COLS * ROWS;  // 25
+const TOTAL = COLS * ROWS;  // 20
 
 /* ── Stan gry ── */
 let vocabulary    = [];
