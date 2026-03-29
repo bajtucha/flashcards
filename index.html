@@ -94,6 +94,25 @@ select:focus { border-color: var(--accent); }
 }
 .progress-badge strong { color: var(--ok); }
 
+.lang-selector {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+.btn-lang {
+  background: none;
+  border: 2px solid transparent;
+  border-radius: var(--r);
+  font-size: 1.4rem;
+  line-height: 1;
+  padding: 2px 4px;
+  cursor: pointer;
+  opacity: .5;
+  transition: opacity .15s, border-color .15s;
+}
+.btn-lang:hover  { opacity: .8; }
+.btn-lang.active { opacity: 1; border-color: var(--accent); }
+
 .btn-yt {
   display: flex;
   align-items: center;
@@ -384,7 +403,17 @@ select:focus { border-color: var(--accent); }
 
 <header>
   <div class="logo">FlashCards</div>
+  <div class="lang-selector">
+    <button class="btn-lang active" data-lang="english" title="English">🇬🇧</button>
+    <button class="btn-lang" data-lang="french"    title="Français">🇫🇷</button>
+    <button class="btn-lang" data-lang="hungarian" title="Magyar">🇭🇺</button>
+    <button class="btn-lang" data-lang="chinese"   title="中文">🇨🇳</button>
+  </div>
   <div class="controls">
+    <label class="episode-label">
+      Profil:
+      <select id="reward-select"></select>
+    </label>
     <label class="episode-label">
       Epizod:
       <select id="episode-select"></select>
@@ -429,16 +458,22 @@ const TOTAL = COLS * ROWS;  // 20
 
 /* ── Stan gry ── */
 let vocabulary    = [];
+let allImages     = [];
 let imageList     = [];
+let rewardList    = [];
+let allEpisodes   = {};
 let episodeLinks  = {};
+let currentLang   = 'english';
 let currentImage  = '';
 let solvedCount   = 0;
 
 /* ── Elementy DOM ── */
 const boardEl        = document.getElementById('game-board');
 const episodeSel     = document.getElementById('episode-select');
+const rewardSel      = document.getElementById('reward-select');
 const ytLink         = document.getElementById('yt-link');
 const playBtn        = document.getElementById('play-btn');
+const langBtns       = document.querySelectorAll('.btn-lang');
 const progressNum    = document.getElementById('progress-num');
 const statusMsg      = document.getElementById('status-msg');
 const victoryOverlay = document.getElementById('victory-overlay');
@@ -450,8 +485,8 @@ async function init() {
   showStatus('Ładowanie danych…');
   try {
     const [csvText, manifest] = await Promise.all([
-      fetch('data/vocabulary.csv').then(r => {
-        if (!r.ok) throw new Error(`Nie można pobrać vocabulary.csv (HTTP ${r.status})`);
+      fetch(`data/${currentLang}.csv`).then(r => {
+        if (!r.ok) throw new Error(`Nie można pobrać ${currentLang}.csv (HTTP ${r.status})`);
         return r.text();
       }),
       fetch('images/manifest.json').then(r => {
@@ -461,13 +496,16 @@ async function init() {
     ]);
 
     vocabulary   = parseCSV(csvText);
-    imageList    = manifest.images   || [];
-    episodeLinks = manifest.episodes || {};
+    allImages    = manifest.images   || [];
+    rewardList   = manifest.rewards  || [];
+    allEpisodes  = manifest.episodes || {};
+    episodeLinks = allEpisodes[currentLang] || {};
 
     if (!vocabulary.length) throw new Error('Plik CSV jest pusty lub ma nieprawidłowy format.');
-    if (!imageList.length)  throw new Error('Brak obrazków w images/manifest.json.');
+    if (!allImages.length)  throw new Error('Brak obrazków w images/manifest.json.');
 
     hideStatus();
+    populateRewards();
     populateEpisodes();
     startGame();
   } catch (err) {
@@ -521,6 +559,38 @@ ytPlayerClose.addEventListener('click', () => {
   ytIframe.src = '';   // zatrzymaj odtwarzanie
 });
 
+/* ── Zmiana języka ── */
+async function changeLanguage(lang) {
+  currentLang = lang;
+  langBtns.forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+  showStatus('Ładowanie…');
+  try {
+    const csvText = await fetch(`data/${lang}.csv`).then(r => {
+      if (!r.ok) throw new Error(`Brak pliku data/${lang}.csv (HTTP ${r.status})`);
+      return r.text();
+    });
+    vocabulary   = parseCSV(csvText);
+    episodeLinks = allEpisodes[lang] || {};
+    if (!vocabulary.length) throw new Error('Plik CSV jest pusty.');
+    hideStatus();
+    populateEpisodes();
+    startGame();
+  } catch (err) {
+    showStatus(`<strong>Błąd:</strong> ${err.message}`);
+  }
+}
+
+/* ── Selector profilu (reward) ── */
+function populateRewards() {
+  rewardSel.innerHTML = '';
+  for (const r of rewardList) {
+    const opt = document.createElement('option');
+    opt.value = r.prefix;
+    opt.textContent = r.description;
+    rewardSel.appendChild(opt);
+  }
+}
+
 /* ── Selector epizodów ── */
 function populateEpisodes() {
   const episodes = [...new Set(vocabulary.map(v => v.episode))]
@@ -557,6 +627,14 @@ function startGame() {
   }
 
   hideStatus();
+
+  const prefix = rewardSel.value;
+  imageList = allImages.filter(img => img.startsWith(prefix));
+  if (!imageList.length) {
+    showStatus(`Brak obrazków dla profilu <strong>${prefix}</strong>.`);
+    boardEl.innerHTML = '';
+    return;
+  }
 
   const ytUrl = episodeLinks[episode];
   if (ytUrl) {
@@ -757,6 +835,8 @@ function hideStatus() {
 playBtn.addEventListener('click', startGame);
 victoryPlayBtn.addEventListener('click', startGame);
 episodeSel.addEventListener('change', startGame);
+rewardSel.addEventListener('change', startGame);
+langBtns.forEach(btn => btn.addEventListener('click', () => changeLanguage(btn.dataset.lang)));
 
 /* ── Start ── */
 init();

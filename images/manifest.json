@@ -3,11 +3,22 @@
     "gosia1.png",
     "gosia2.png",
     "gosia3.png",
-    "gosia4.png"
+    "gosia4.png",
+    "us_history1.png",
+    "us_history2.png"
+  ],
+  "rewards": [
+    { "prefix": "gosia",      "description": "Gosia" },
+    { "prefix": "us_history", "description": "Historia USA" }
   ],
   "episodes": {
-    "1": "https://www.youtube.com/watch?v=6L-zHNdy288&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=216",
-    "2": "https://www.youtube.com/watch?v=DDjWTWHHkpk&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=213"
-
+    "english": {
+      "1": "https://www.youtube.com/watch?v=6L-zHNdy288&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=216",
+      "2": "https://www.youtube.com/watch?v=DDjWTWHHkpk&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=213",
+      "3": "https://www.youtube.com/watch?v=fVDro8PY_bo&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=212"
+    },
+    "french":    {},
+    "hungarian": {},
+    "chinese":   {}
   }
 }
