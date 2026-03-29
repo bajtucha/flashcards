@@ -113,6 +113,41 @@ select:focus { border-color: var(--accent); }
 .btn-lang:hover  { opacity: .8; }
 .btn-lang.active { opacity: 1; border-color: var(--accent); }
 
+.font-size-selector {
+  display: flex;
+  gap: 2px;
+  align-items: center;
+}
+.btn-font {
+  background: var(--surface);
+  color: var(--muted);
+  border: 1px solid var(--border);
+  border-radius: var(--r);
+  cursor: pointer;
+  font-weight: 700;
+  line-height: 1;
+  transition: border-color .15s, color .15s;
+}
+.btn-font:nth-child(1) { font-size: .75rem; padding: 5px 8px; }
+.btn-font:nth-child(2) { font-size: .95rem; padding: 4px 8px; }
+.btn-font:nth-child(3) { font-size: 1.15rem; padding: 3px 8px; }
+.btn-font:hover { border-color: var(--accent); color: var(--accent); }
+.btn-font.active { border-color: var(--accent); color: var(--accent); background: rgba(88,166,255,.1); }
+
+.btn-reverse {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 7px 12px;
+  border-radius: var(--r);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: border-color .15s, color .15s;
+  white-space: nowrap;
+}
+.btn-reverse:hover       { border-color: var(--accent); color: var(--accent); }
+.btn-reverse.active      { border-color: var(--accent); color: var(--accent); background: rgba(88,166,255,.1); }
+
 .btn-yt {
   display: flex;
   align-items: center;
@@ -282,6 +317,14 @@ select:focus { border-color: var(--accent); }
 .btn-ok:hover,
 .btn-wrong:hover { transform: scale(1.2); filter: brightness(1.15); }
 
+/* ── Rozmiary czcionki ───────────────────────────── */
+body.font-sm .card-translation,
+body.font-sm .card-original { font-size: clamp(.4rem,  9cqw, 1.05rem); }
+body.font-md .card-translation,
+body.font-md .card-original { font-size: clamp(.4rem, 13cqw, 1.45rem); }
+body.font-lg .card-translation,
+body.font-lg .card-original { font-size: clamp(.4rem, 17cqw, 1.85rem); }
+
 /* ── Floating YouTube player ─────────────────────── */
 #yt-player {
   position: fixed;
@@ -425,6 +468,12 @@ select:focus { border-color: var(--accent); }
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.5 12 3.5 12 3.5s-7.5 0-9.4.6A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.6 9.4.6 9.4.6s7.5 0 9.4-.6a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.7 15.5V8.5l6.3 3.5-6.3 3.5z"/></svg>
       Odcinek
     </a>
+    <div class="font-size-selector">
+      <button class="btn-font active" data-size="sm" title="Mała czcionka">A</button>
+      <button class="btn-font" data-size="md" title="Średnia czcionka">A</button>
+      <button class="btn-font" data-size="lg" title="Duża czcionka">A</button>
+    </div>
+    <button class="btn-reverse" id="reverse-btn" title="Odwróć kierunek fiszek">⇄</button>
     <button class="btn-primary" id="play-btn">&#8635; Zagraj jeszcze raz</button>
   </div>
 </header>
@@ -464,6 +513,8 @@ let rewardList    = [];
 let allEpisodes   = {};
 let episodeLinks  = {};
 let currentLang   = 'english';
+let isReversed    = false;
+let fontSize      = 'sm';
 let currentImage  = '';
 let solvedCount   = 0;
 
@@ -474,6 +525,8 @@ const rewardSel      = document.getElementById('reward-select');
 const ytLink         = document.getElementById('yt-link');
 const playBtn        = document.getElementById('play-btn');
 const langBtns       = document.querySelectorAll('.btn-lang');
+const reverseBtn     = document.getElementById('reverse-btn');
+const fontBtns       = document.querySelectorAll('.btn-font');
 const progressNum    = document.getElementById('progress-num');
 const statusMsg      = document.getElementById('status-msg');
 const victoryOverlay = document.getElementById('victory-overlay');
@@ -699,6 +752,7 @@ function renderBoard(words) {
 
 /* ── Tworzenie pojedynczej karty ── */
 function makeCard({ original, translation, timestamp }, row, col) {
+  if (isReversed) { [original, translation] = [translation, original]; }
   const card  = document.createElement('div');
   card.className   = 'card';
   card.dataset.state = 'hidden';
@@ -837,6 +891,20 @@ victoryPlayBtn.addEventListener('click', startGame);
 episodeSel.addEventListener('change', startGame);
 rewardSel.addEventListener('change', startGame);
 langBtns.forEach(btn => btn.addEventListener('click', () => changeLanguage(btn.dataset.lang)));
+document.body.classList.add('font-sm');
+fontBtns.forEach(btn => btn.addEventListener('click', () => {
+  fontSize = btn.dataset.size;
+  document.body.classList.remove('font-sm', 'font-md', 'font-lg');
+  document.body.classList.add(`font-${fontSize}`);
+  fontBtns.forEach(b => b.classList.toggle('active', b === btn));
+  startGame();
+}));
+
+reverseBtn.addEventListener('click', () => {
+  isReversed = !isReversed;
+  reverseBtn.classList.toggle('active', isReversed);
+  startGame();
+});
 
 /* ── Start ── */
 init();

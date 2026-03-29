@@ -1,24 +1,382 @@
 # Format: oryginał;tłumaczenie;timestamp;epizod
 # Linie zaczynające się od # są ignorowane.
 
-# ── Epizod 1: Podstawowe zwroty ──────────────────────────────────
-Bonjour, comment ça va?;Cześć, jak się masz?;;1
-Très bien, merci.;Bardzo dobrze, dziękuję.;;1
-Où est le restaurant?;Gdzie jest restauracja?;;1
-Je voudrais un café, s'il vous plaît.;Poproszę kawę.;;1
-Combien ça coûte?;Ile to kosztuje?;;1
-Je ne comprends pas.;Nie rozumiem.;;1
-Pouvez-vous parler plus lentement?;Czy może Pan/Pani mówić wolniej?;;1
-Où sont les toilettes?;Gdzie jest toaleta?;;1
-Je m'appelle Sophie.;Mam na imię Sophie.;;1
-Enchanté de vous rencontrer.;Miło mi Pana/Panią poznać.;;1
-Quelle heure est-il?;Która jest godzina?;;1
-Le menu, s'il vous plaît.;Poproszę menu.;;1
-C'est délicieux!;To jest przepyszne!;;1
-L'addition, s'il vous plaît.;Poproszę o rachunek.;;1
-Je suis allergique aux noix.;Jestem uczulony/a na orzechy.;;1
-Avez-vous une table pour deux?;Czy ma Pan/Pani stolik dla dwóch osób?;;1
-Quelle est la spécialité de la maison?;Jakie jest danie specjalne zakładu?;;1
-Je voudrais réserver une chambre.;Chciałbym/Chciałabym zarezerwować pokój.;;1
-À quelle heure part le train?;O której godzinie odjeżdża pociąg?;;1
-Pourriez-vous m'aider?;Czy mógłby Pan/mogłaby Pani mi pomóc?;;1
+# ── Epizod 1: Happiness ──────────────────────────────────
+Bonjour les amis et bienvenue dans un nouvel épisode d'Easy French;Cześć przyjaciele i witajcie w nowym odcinku Easy French;00:00;1
+Aujourd'hui, nous allons demander aux passants s'ils sont heureux;Dzisiaj zapytamy przechodniów, czy są szczęśliwi;00:05;1
+Est-ce que vous êtes heureux ?;Czy jesteś szczęśliwy?;00:18;1
+Parfaitement heureux;Całkowicie szczęśliwy;00:20;1
+Dès le moment où on est en bonne santé, je suis heureux;Kiedy jestem zdrowy, jestem szczęśliwy;00:22;1
+Qu'est-ce qui vous rend heureux ?;Co sprawia, że jesteś szczęśliwy?;00:24;1
+Marcher dans la plus belle ville du monde, Paris;Spacerowanie po najpiękniejszym mieście świata, Paryżu;00:30;1
+Paris est un musée à ciel ouvert;Paryż jest muzeum na świeżym powietrzu;00:37;1
+Oui, très heureuse;Tak, bardzo szczęśliwa;00:40;1
+C'est quoi le secret ?;Jaki jest sekret?;00:42;1
+Prendre des décisions;Podejmować decyzje;00:46;1
+Changer de métier, c'est très bien;Zmiana zawodu jest bardzo dobra;00:47;1
+Je faisais de l'investissement et maintenant je monte ma société;Pracowałam w inwestycjach, a teraz zakładam firmę;00:52;1
+Avant ce changement, j'étais moins heureuse;Przed tą zmianą byłam mniej szczęśliwa;01:07;1
+Il faut prendre des décisions;Trzeba podejmować decyzje;01:09;1
+Qu'est-ce qui vous rend heureuse ?;Co sprawia, że jesteś szczęśliwa?;01:18;1
+La nature et le calme me rendent heureuse;Natura i spokój sprawiają, że jestem szczęśliwa;01:20;1
+Je me retrouve dans cet environnement;Odnajduję się w tym środowisku;01:31;1
+Je suis heureuse;Jestem szczęśliwa;01:33;1
+Être en bonne santé et avoir une famille sympa;Bycie zdrowym i posiadanie fajnej rodziny;01:39;1
+Qu'est-ce qui vous rend heureux ?;Co sprawia, że jesteś szczęśliwy?;01:46;1
+Passer du temps avec mes amis;Spędzanie czasu z przyjaciółmi;01:50;1
+J'ai du temps libre pour faire ce que j'aime;Mam czas wolny, żeby robić to co lubię;01:55;1
+Je vais prendre un café avec un ami;Idę napić się kawy z przyjacielem;02:05;1
+Ma vie me rend heureuse;Moje życie mnie uszczęśliwia;02:12;1
+Je viens souvent à Paris;Często przyjeżdżam do Paryża;02:13;1
+La simplicité de ma vie me rend heureuse;Prostota mojego życia mnie uszczęśliwia;02:30;1
+J'ai des enfants et des petits-enfants;Mam dzieci i wnuki;02:35;1
+Est-ce que vous êtes heureux ?;Czy jesteś szczęśliwy?;02:45;1
+Je suis à Paris;Jestem w Paryżu;02:46;1
+Vous venez d'où ?;Skąd jesteś?;02:48;1
+Je viens du Liban;Jestem z Libanu;02:52;1
+Être à Paris me rend très heureux;Bycie w Paryżu czyni mnie bardzo szczęśliwym;03:00;1
+J'adore Paris;Uwielbiam Paryż;03:07;1
+Qu'est-ce qui vous plaît à Paris ?;Co podoba ci się w Paryżu?;03:09;1
+Les rues, la nourriture et l'architecture;Ulice, jedzenie i architektura;03:13;1
+Je retourne chez ma famille;Wracam do mojej rodziny;03:25;1
+Une des choses qui me rendent heureuse, c'est discuter avec des amis;Jedną z rzeczy, które mnie uszczęśliwiają, jest rozmowa z przyjaciółmi;03:41;1
+Est-ce que vous avez toujours été heureux ?;Czy zawsze byłeś szczęśliwy?;04:15;1
+Personne n'est heureux tout le temps;Nikt nie jest szczęśliwy cały czas;04:20;1
+On a tous des hauts et des bas;Wszyscy mamy wzloty i upadki;04:22;1
+Il faut trouver ce qui nous rend heureux;Trzeba znaleźć to, co nas uszczęśliwia;04:24;1
+Il faut se découvrir;Trzeba odkryć siebie;04:30;1
+Je n'ai pas toujours été heureuse;Nie zawsze byłam szczęśliwa;04:39;1
+Il y a des moments difficiles dans la vie;Są trudne momenty w życiu;04:42;1
+Rien n'est jamais définitif;Nic nie jest ostateczne;05:08;1
+Si tu es positif, tu attires du positif;Jeśli jesteś pozytywny, przyciągasz pozytywne rzeczy;05:15;1
+On ne peut pas être heureux tout le temps;Nie można być szczęśliwym cały czas;05:27;1
+Tout le monde traverse des épreuves;Każdy przechodzi przez trudności;05:36;1
+Comment retrouver le sourire ?;Jak odzyskać uśmiech?;05:50;1
+La prière m'aide;Modlitwa mi pomaga;05:56;1
+Je voyage et je vois des gens agréables;Podróżuję i spotykam miłych ludzi;06:03;1
+Qu'est-ce qui vous redonne le sourire ?;Co przywraca ci uśmiech?;06:08;1
+La musique et la méditation;Muzyka i medytacja;06:13;1
+L'argent peut aider à être heureux;Pieniądze mogą pomóc być szczęśliwym;06:34;1
+Chacun a sa façon de trouver le bonheur;Każdy ma swój sposób na znalezienie szczęścia;06:40;1
+J'écoute du jazz et de la musique classique;Słucham jazzu i muzyki klasycznej;07:01;1
+Le jazz représente la liberté;Jazz oznacza wolność;07:21;1
+On a tous des soucis et des problèmes;Wszyscy mamy zmartwienia i problemy;07:30;1
+Il faut en parler et demander de l'aide;Trzeba o tym rozmawiać i prosić o pomoc;07:40;1
+Il ne faut pas avoir peur de demander de l'aide;Nie trzeba się bać prosić o pomoc;07:46;1
+Est-ce qu'il faut être amoureux pour être heureux ?;Czy trzeba być zakochanym, żeby być szczęśliwym?;08:17;1
+Ça aide;To pomaga;08:21;1
+C'est bien d'être à deux;Dobrze jest być we dwoje;08:23;1
+Dites-nous quel est pour vous le secret du bonheur;Powiedzcie nam, jaki jest wasz sekret szczęścia;08:33;1
+heureux;szczęśliwy;00:18;1
+en bonne santé;w dobrym zdrowiu;00:22;1
+rendre heureux;uszczęśliwiać;00:24;1
+marcher;spacerować;00:30;1
+ville;miasto;00:30;1
+musée à ciel ouvert;muzeum na świeżym powietrzu;00:37;1
+secret;sekret;00:42;1
+prendre des décisions;podejmować decyzje;00:46;1
+changer de métier;zmienić zawód;00:47;1
+investissement;inwestycje;00:52;1
+monter une société;założyć firmę;00:52;1
+réseau professionnel;sieć zawodowa;00:59;1
+nature;natura;01:20;1
+calme;spokój;01:20;1
+environnement;środowisko;01:31;1
+famille;rodzina;01:39;1
+amis;przyjaciele;01:50;1
+temps libre;czas wolny;01:55;1
+projets;projekty;01:56;1
+prendre un café;napić się kawy;02:05;1
+simplicité;prostota;02:30;1
+enfants;dzieci;02:35;1
+petits-enfants;wnuki;02:35;1
+vacances;wakacje;02:13;1
+architecture;architektura;03:13;1
+nourriture;jedzenie;03:13;1
+rues;ulice;03:13;1
+discuter;rozmawiać;03:41;1
+communauté;społeczność;03:49;1
+toujours;zawsze;04:15;1
+hauts et bas;wzloty i upadki;04:22;1
+trouver;znaleźć;04:24;1
+bonheur;szczęście;04:24;1
+se découvrir;odkrywać siebie;04:30;1
+moments difficiles;trudne momenty;04:42;1
+événements;wydarzenia;04:47;1
+expériences;doświadczenia;04:50;1
+positif;pozytywny;05:15;1
+attirer;przyciągać;05:15;1
+épreuves;próby / trudności;05:36;1
+retrouver le sourire;odzyskać uśmiech;05:50;1
+prière;modlitwa;05:56;1
+voyager;podróżować;06:03;1
+musique;muzyka;06:13;1
+méditation;medytacja;06:13;1
+argent;pieniądze;06:34;1
+façon;sposób;06:40;1
+jazz;jazz;07:01;1
+classique;klasyczna;07:01;1
+liberté;wolność;07:21;1
+soucis;zmartwienia;07:30;1
+problèmes;problemy;07:30;1
+demander de l'aide;prosić o pomoc;07:40;1
+psychologue;psycholog;08:02;1
+amoureux;zakochany;08:17;1
+être à deux;być we dwoje;08:23;1
+secret du bonheur;sekret szczęścia;08:33;1
+
+# ── Epizod 2: What Do The French Have For Breakfast? ──────────────────────────────────
+Bonjour les amis et bienvenue dans un nouvel épisode gourmand d'Easy French;Cześć przyjaciele i witajcie w nowym kulinarnym odcinku Easy French;00:00;2
+Aujourd'hui, nous allons demander aux Parisiens ce qu'ils ont mangé au petit-déjeuner;Dzisiaj zapytamy paryżan, co zjedli na śniadanie;00:04;2
+Qu'est-ce que vous avez mangé au petit-déjeuner ce matin ?;Co zjadłeś dziś rano na śniadanie?;00:22;2
+Le pain au chocolat;Pain au chocolat;00:24;2
+Oui, c'est ce que vous prenez typiquement le matin ?;Tak, to właśnie jesz zazwyczaj rano?;00:30;2
+Oui, avec un jus d'orange pressé;Tak, z wyciskanym sokiem pomarańczowym;00:31;2
+Pain au chocolat, café, comme d'habitude;Pain au chocolat, kawa, jak zwykle;00:36;2
+Comme tous les matins;Jak każdego ranka;00:39;2
+C'est le petit-déjeuner de Parisien;To paryskie śniadanie;00:41;2
+Vous l'avez acheté où ?;Gdzie to kupiłeś?;00:45;2
+À la boulangerie juste là;W piekarni, tu obok;00:47;2
+Vous êtes à Paris depuis beaucoup de temps ?;Jesteś w Paryżu od dawna?;00:53;2
+Onze ans maintenant;Jedenaście lat już teraz;00:55;2
+Vous venez d'où ?;Skąd pochodzisz?;01:00;2
+Australie;Australia;01:01;2
+Il faut apprendre;Trzeba się uczyć;01:05;2
+J'ai bu un café au lait et un croissant;Wypiłem kawę z mlekiem i zjadłem croissanta;01:11;2
+C'est un petit-déjeuner classique pour vous ?;To jest dla pana klasyczne śniadanie?;01:17;2
+Non, normalement je ne mange pas le matin;Nie, normalnie nie jem rano;01:19;2
+Je fais une sorte de jeûne intermittent;Stosuję coś w rodzaju postu przerywanego;01:28;2
+Un chocolat chaud et des tartines;Gorąca czekolada i grzanki;01:40;2
+Il y avait quoi sur les tartines ?;Co było na grzankach?;01:44;2
+De la confiture ou du miel et du beurre;Dżem albo miód i masło;01:46;2
+La confiture de framboise;Dżem malinowy;01:52;2
+C'est ta confiture préférée ?;To twój ulubiony dżem?;01:54;2
+Un yaourt, du thé, du pain grillé;Jogurt, herbata, grzanki;02:01;2
+C'est un petit-déjeuner classique que vous prenez souvent ?;Czy to klasyczne śniadanie, które często pani je?;02:12;2
+Toujours le même;Zawsze takie samo;02:15;2
+Avec un peu de jus d'orange quelquefois;Czasami z odrobiną soku pomarańczowego;02:17;2
+Je suis quelqu'un de sportif;Jestem osobą aktywną fizycznie;02:20;2
+C'est une sorte de gros pancake;To coś w rodzaju dużego pankejka;02:22;2
+De la banane, des œufs, des flocons d'avoine mixés;Banan, jajka, zmiksowane płatki owsiane;02:25;2
+Un gros pancake bien protéiné;Duży, dobrze białkowy pankejk;02:32;2
+C'est votre petit-déjeuner de tous les matins ?;To jest twoje śniadanie każdego ranka?;02:36;2
+C'est souvent ça;Często właśnie to;02:39;2
+J'ai mangé des omelettes, un shaker protéiné et quelques amandes;Zjadłem omlet, wypiłem shake proteinowy i zjadłem kilka migdałów;02:43;2
+C'est un petit-déjeuner classique pour vous ?;To jest dla ciebie klasyczne śniadanie?;02:54;2
+Moi, je fais du sport en ce moment;Ja teraz uprawiam sport;02:56;2
+J'essaie d'éviter les croissants;Staram się unikać croissantów;03:11;2
+J'ai mangé un croissant au chocolat et une tranche de cake au citron;Zjadłam czekoladowego croissanta i kawałek cytrynowego ciasta;03:14;2
+D'habitude, c'est plus du yaourt grec avec du muesli;Zwykle to raczej jogurt grecki z musli;03:20;2
+Mais je suis à Paris, alors autant en profiter;Ale jestem w Paryżu, więc warto z tego skorzystać;03:23;2
+J'habite à Kansas City, dans le Missouri, aux États-Unis;Mieszkam w Kansas City, w Missouri, w Stanach Zjednoczonych;03:27;2
+Des biscottes avec du thé;Sucharki z herbatą;03:35;2
+C'est votre petit-déjeuner classique ?;To jest pani klasyczne śniadanie?;03:38;2
+Absolument, tous les jours;Absolutnie, codziennie;03:40;2
+Qu'est-ce que vous mettez sur vos biscottes ?;Co kładzie pani na sucharki?;03:46;2
+Un peu de beurre, du miel, éventuellement de la confiture;Trochę masła, miód, ewentualnie dżem;03:53;2
+J'étais très en retard;Bardzo się spieszyłam;04:01;2
+Une banane, littéralement;Dosłownie banana;04:03;2
+Je fonce m'acheter un truc à manger;Pędzę kupić sobie coś do jedzenia;04:05;2
+Un café quand même, toujours un café;Jednak kawa, zawsze kawa;04:09;2
+J'adore le pain et le beurre;Uwielbiam chleb i masło;04:17;2
+Je suis bretonne, donc je mange du beurre salé tout le temps;Jestem Bretońką, więc cały czas jem solone masło;04:21;2
+J'aime les baguettes tradition;Lubię bagietki tradycyjne;04:27;2
+Le petit-déjeuner fait partie intégrante de la culture d'un pays;Śniadanie stanowi integralną część kultury kraju;04:34;2
+J'ai pris du thé, un chocolat et des tartines;Wziąłem herbatę, czekoladę i grzanki;05:18;2
+À chaque tartine, je change;Na każdej grzance zmieniam dodatek;05:26;2
+J'ai mis une tartine de miel de châtaignier;Posmarowałem jedną grzankę miodem kasztanowym;05:29;2
+Une tartine de miel de lavande;Jedną grzankę miodem lawendowym;05:33;2
+Une tartine de confiture d'abricot;Jedną grzankę dżemem morelowym;05:36;2
+Une autre tartine de confiture de myrtille;Kolejną grzankę dżemem borówkowym;05:39;2
+C'est copieux;To jest sycące;05:44;2
+Le week-end, vous faites un petit-déjeuner différent ?;W weekend robicie inne śniadanie?;05:45;2
+Parfois, on prend des petits croissants;Czasami bierzemy małe croissanty;05:49;2
+Tu préfères quoi, les croissants ou les pains au chocolat ?;Co wolisz, croissanty czy pains au chocolat?;05:59;2
+Les pains au chocolat;Pains au chocolat;06:02;2
+Un pain au chocolat et une demi-baguette;Pain au chocolat i pół bagietki;06:08;2
+C'est un petit-déjeuner classique;To klasyczne śniadanie;06:15;2
+Petit-déjeuner du dimanche plutôt;Raczej niedzielne śniadanie;06:17;2
+Vous avez bu quelque chose ?;Piłeś coś?;06:22;2
+Un bol de lait chaud;Miskę ciepłego mleka;06:26;2
+D'habitude, il y a du jus d'orange;Zwykle jest sok pomarańczowy;06:33;2
+Le dimanche, c'est viennoiserie;W niedzielę są wyroby śniadaniowe;06:40;2
+Le week-end, parfois, on prend un brunch;W weekend czasami jemy brunch;06:56;2
+Qu'est-ce que vous prenez dans un brunch ?;Co bierzesz na brunch?;07:02;2
+Des œufs, une toast avocat;Jajka, tost z awokado;07:06;2
+Le week-end, vous prenez un petit-déjeuner plus copieux ?;W weekend jesz bardziej obfite śniadanie?;07:14;2
+Oui, un brunch souvent avec les copains;Tak, często brunch z przyjaciółmi;07:18;2
+C'est souvent plat salé, plat sucré;Często jest danie słone i słodkie;07:23;2
+Beaucoup d'alcool le matin;Dużo alkoholu rano;07:29;2
+À quelle heure vous le prenez, le brunch ?;O której jecie brunch?;07:32;2
+Normalement entre 11h et 13h;Normalnie między 11 a 13;07:33;2
+Vous buvez quoi comme alcool ?;Jaki alkohol pijecie?;07:36;2
+Souvent des mimosas;Często mimosy;07:38;2
+C'est du champagne et du jus d'orange;To szampan i sok pomarańczowy;07:47;2
+Vous avez un endroit où vous aimez aller pour bruncher ?;Macie miejsce, do którego lubicie chodzić na brunch?;07:54;2
+Quand je rentre dans ma famille, mon père va toujours chercher toutes les viennoiseries;Kiedy wracam do rodziny, mój ojciec zawsze idzie po wszystkie wypieki śniadaniowe;08:15;2
+Le petit-déjeuner en famille, c'est toujours avec mille viennoiseries;Rodzinne śniadanie jest zawsze z mnóstwem wypieków;08:20;2
+Vous venez d'où ?;Skąd jesteś?;08:26;2
+Je viens de Bretagne;Jestem z Bretanii;08:27;2
+J'habite à côté de Rennes;Mieszkam niedaleko Rennes;08:29;2
+J'ai l'impression d'avoir deux vies entre Paris et la Bretagne;Mam wrażenie, że mam dwa życia: między Paryżem a Bretanią;08:37;2
+J'y retourne souvent;Często tam wracam;08:43;2
+Besoin de se ressourcer, la nature, tout ça, ça fait du bien;Trzeba się zregenerować, natura i to wszystko dobrze robi;08:48;2
+Merci les amis d'avoir regardé cet épisode;Dzięki przyjaciele za obejrzenie tego odcinka;08:53;2
+Dites-nous en commentaire ce que vous avez mangé pour le petit-déjeuner ce matin;Napiszcie w komentarzu, co zjedliście dziś rano na śniadanie;08:58;2
+Si cette vidéo vous a plu, likez-la et abonnez-vous;Jeśli spodobał wam się ten film, dajcie lajka i zasubskrybujcie;09:03;2
+À bientôt;Do zobaczenia;09:11;2
+petit-déjeuner;śniadanie;00:04;2
+manger;jeść;00:22;2
+pain au chocolat;pain au chocolat;00:24;2
+jus d'orange pressé;świeżo wyciskany sok pomarańczowy;00:31;2
+café;kawa;00:36;2
+boulangerie;piekarnia;00:47;2
+croissant;croissant;01:11;2
+café au lait;kawa z mlekiem;01:11;2
+jeûne intermittent;post przerywany;01:28;2
+chocolat chaud;gorąca czekolada;01:40;2
+tartines;grzanki;01:40;2
+confiture;dżem;01:46;2
+miel;miód;01:46;2
+beurre;masło;01:46;2
+confiture de framboise;dżem malinowy;01:52;2
+yaourt;jogurt;02:01;2
+thé;herbata;02:01;2
+pain grillé;tost / grzanka;02:01;2
+jus d'orange;sok pomarańczowy;02:17;2
+pancake;pankejk;02:22;2
+banane;banan;02:25;2
+œufs;jajka;02:25;2
+flocons d'avoine;płatki owsiane;02:25;2
+protéiné;białkowy;02:32;2
+omelette;omlet;02:43;2
+shaker protéiné;shake proteinowy;02:43;2
+amandes;migdały;02:43;2
+faire du sport;uprawiać sport;02:56;2
+éviter;unikać;03:11;2
+cake au citron;ciasto cytrynowe;03:14;2
+yaourt grec;jogurt grecki;03:20;2
+muesli;musli;03:20;2
+en profiter;skorzystać;03:23;2
+biscottes;sucharki;03:35;2
+retard;spóźnienie;04:01;2
+banane;banan;04:03;2
+acheter;kupić;04:05;2
+pain;chleb;04:17;2
+beurre salé;masło solone;04:21;2
+baguette tradition;bagietka tradycyjna;04:27;2
+culture;kultura;04:34;2
+tartine;grzanka;05:18;2
+miel de châtaignier;miód kasztanowy;05:29;2
+miel de lavande;miód lawendowy;05:33;2
+confiture d'abricot;dżem morelowy;05:36;2
+confiture de myrtille;dżem borówkowy;05:39;2
+copieux;sycący;05:44;2
+croissants;croissanty;05:49;2
+demi-baguette;pół bagietki;06:08;2
+lait chaud;ciepłe mleko;06:26;2
+viennoiserie;wypieki śniadaniowe;06:40;2
+brunch;brunch;06:56;2
+œufs;jajka;07:06;2
+toast avocat;tost z awokado;07:06;2
+plat salé;danie słone;07:23;2
+plat sucré;danie słodkie;07:23;2
+alcool;alkohol;07:29;2
+mimosa;mimosa;07:38;2
+champagne;szampan;07:47;2
+jus d'orange;sok pomarańczowy;07:47;2
+viennoiseries;wypieki śniadaniowe;08:15;2
+famille;rodzina;08:15;2
+Bretagne;Bretania;08:27;2
+se ressourcer;zregenerować się;08:48;2
+nature;natura;08:48;2
+
+# ── Epizod 3: How To Say No Like The French ──────────────────────────────────
+Ne t'inquiète pas, nous allons faire ça pas à pas;Nie martw się, zrobimy to krok po kroku;00:12;3
+Judith, est-ce que tu veux un chewing-gum ?;Judith, chcesz gumę do żucia?;00:35;3
+Non, merci;Nie, dziękuję;00:35;3
+Un bonbon à la menthe alors ?;Może cukierek miętowy?;00:36;3
+Non, ça va;Nie, w porządku;00:42;3
+Ah, tu n'aimes pas ça ?;Aha, nie lubisz tego?;00:42;3
+Non, pas vraiment;Nie, nie bardzo;00:42;3
+Judith, est-ce que tu travailles aujourd'hui ?;Judith, pracujesz dzisiaj?;01:34;3
+Non, je ne travaille pas;Nie, nie pracuję;01:37;3
+Je vais boire un café avec Louis;Idę napić się kawy z Louisem;01:37;3
+Mais tu as déjà travaillé aujourd'hui ?;Ale czy już dziś pracowałaś?;01:43;3
+Non, je n'ai pas travaillé;Nie, nie pracowałam;01:44;3
+Je me suis reposée;Odpoczywałam;01:45;3
+Axel, est-ce que tu vas à la soirée d'anniversaire d'Hélène ce soir ?;Axel, idziesz dziś na urodziny Hélène?;01:52;3
+Non, je ne vais pas pouvoir;Nie, nie będę mógł;01:52;3
+Je vais au concert de Beyoncé ce soir;Idę dziś na koncert Beyoncé;01:52;3
+Tu parles allemand, Axel ?;Mówisz po niemiecku, Axel?;03:16;3
+Non, je ne parle pas du tout allemand;Nie, w ogóle nie mówię po niemiecku;03:16;3
+Mais tu parles italien ?;Ale mówisz po włosku?;03:24;3
+Non, je prends des cours mais je ne parle pas encore bien italien;Nie, biorę lekcje, ale jeszcze nie mówię dobrze po włosku;03:25;3
+C'est incroyable;To niesamowite;05:22;3
+Je pars toujours en avance mais je n'arrive jamais à l'heure;Zawsze wychodzę wcześniej, ale nigdy nie docieram na czas;05:22;3
+Moi, je ne fume jamais;Ja nigdy nie palę;05:30;3
+D'ailleurs, je n'ai jamais fumé de ma vie;Zresztą nigdy w życiu nie paliłem;05:30;3
+Comme j'ai taché mon pull préféré, je ne le mets plus;Ponieważ pobrudziłem mój ulubiony sweter, już go nie noszę;05:51;3
+Je ne fais plus de sport depuis que je me suis cassé la jambe;Nie uprawiam już sportu od kiedy złamałem nogę;05:51;3
+Est-ce que tu veux boire quelque chose ?;Chcesz się czegoś napić?;06:01;3
+Non, je ne veux rien;Nie, nic nie chcę;06:01;3
+Est-ce que tu as préparé l'épisode d'aujourd'hui ?;Przygotowałeś dzisiejszy odcinek?;06:05;3
+Non, je n'ai rien préparé;Nie, nic nie przygotowałem;06:05;3
+Est-ce que tu as des idées ?;Masz jakieś pomysły?;06:20;3
+Non, je n'ai aucune idée;Nie, nie mam żadnego pomysłu;06:20;3
+Est-ce que tu as acheté un livre à la librairie ?;Kupiłeś książkę w księgarni?;06:24;3
+Non, je n'ai rien acheté;Nie, nic nie kupiłem;06:28;3
+Je n'ai trouvé aucun livre intéressant;Nie znalazłem żadnej ciekawej książki;06:28;3
+Est-ce que tu vois quelqu'un dans le café ?;Widzisz kogoś w kawiarni?;07:02;3
+Non, je ne vois personne;Nie, nikogo nie widzę;07:02;3
+Est-ce que tu crois que leur chaise est prise ?;Myślisz, że to miejsce jest zajęte?;07:08;3
+Non, je pense qu'elle est libre;Nie, myślę, że jest wolne;07:11;3
+On dirait qu'ils n'attendent personne;Wygląda na to, że na nikogo nie czekają;07:11;3
+Tu veux un thé ou un café ?;Chcesz herbatę czy kawę?;07:33;3
+Tu sais très bien que je n'aime ni le café ni le thé;Dobrze wiesz, że nie lubię ani kawy, ani herbaty;07:35;3
+Est-ce que tu as repris tes cours d'allemand ?;Wróciłeś do nauki niemieckiego?;07:43;3
+Oui, mais je ne comprends ni la grammaire ni la conjugaison;Tak, ale nie rozumiem ani gramatyki, ani koniugacji;07:43;3
+ne t'inquiète pas;nie martw się;00:12;3
+pas à pas;krok po kroku;00:12;3
+chewing-gum;guma do żucia;00:35;3
+bonbon à la menthe;cukierek miętowy;00:36;3
+ça va;w porządku;00:42;3
+pas vraiment;nie bardzo;00:42;3
+travailler;pracować;01:34;3
+boire un café;pić kawę;01:37;3
+se reposer;odpoczywać;01:45;3
+soirée d'anniversaire;impreza urodzinowa;01:52;3
+concert;koncert;01:52;3
+parler allemand;mówić po niemiecku;03:16;3
+du tout;w ogóle;03:16;3
+prendre des cours;brać lekcje;03:25;3
+encore;jeszcze;03:25;3
+incroyable;niesamowite;05:22;3
+en avance;wcześniej;05:22;3
+arriver à l'heure;przyjść na czas;05:22;3
+ne jamais;nigdy nie;05:30;3
+de ma vie;w moim życiu;05:30;3
+tacher;pobrudzić;05:51;3
+pull;sweter;05:51;3
+ne plus;już nie;05:51;3
+faire du sport;uprawiać sport;05:51;3
+se casser la jambe;złamać nogę;05:51;3
+boire quelque chose;pić coś;06:01;3
+rien;nic;06:01;3
+préparer;przygotować;06:05;3
+idée;pomysł;06:20;3
+acheter;kupić;06:24;3
+librairie;księgarnia;06:24;3
+trouver;znaleźć;06:28;3
+intéressant;ciekawy;06:28;3
+voir quelqu'un;widzieć kogoś;07:02;3
+personne;nikt;07:02;3
+chaise;krzesło;07:08;3
+prise;zajęta;07:08;3
+libre;wolna;07:11;3
+attendre;czekać;07:11;3
+ni... ni...;ani... ani...;07:35;3
+reprendre;wrócić do;07:43;3
+comprendre;rozumieć;07:43;3
+grammaire;gramatyka;07:43;3
+conjugaison;koniugacja;07:43;3

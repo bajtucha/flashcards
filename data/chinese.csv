@@ -1,24 +1,92 @@
 # Format: oryginał;tłumaczenie;timestamp;epizod
 # Linie zaczynające się od # są ignorowane.
 
-# ── Epizod 1: Podstawowe zwroty ──────────────────────────────────
-你好;Cześć;01:13;1
-谢谢你;Dziękuję ci;;1
-不客气;Nie ma za co;;1
-对不起;Przepraszam;;1
-没关系;Nic się nie stało;;1
-你叫什么名字?;Jak masz na imię?;;1
-我叫王明。;Mam na imię Wang Ming.;;1
-你好吗?;Jak się czujesz?;;1
-我很好。;Mam się dobrze.;;1
-请问厕所在哪里?;Przepraszam, gdzie jest toaleta?;;1
-多少钱?;Ile to kosztuje?;;1
-太贵了。;To jest za drogie.;;1
-我不明白。;Nie rozumiem.;;1
-请说慢一点。;Proszę mówić wolniej.;;1
-你会说英语吗?;Czy mówisz po angielsku?;;1
-我想要一杯咖啡。;Chciałbym/Chciałabym kawę.;;1
-好吃!;Pyszne!;;1
-请给我账单。;Poproszę o rachunek.;;1
-再见;Do widzenia;;1
-明天见!;Do zobaczenia jutro!;;1
+# ── Epizod 1 ──────────────────────────────────
+你好！你想喝茶吗？;Cześć! Czy chcesz się napić herbaty?;00:00;1
+是，我想喝茶;Tak, chcę się napić herbaty;00:20;1
+不，我不喝红茶，我想喝奶茶。;Nie, nie piję czarnej herbaty, chcę pić herbatę mleczną;00:23;1
+你好;Cześć;00:35;1
+喝;Pić;01:26;1
+你喝;Ty pijesz;02:11;1
+我喝;Ja piję;03:26;1
+茶;Herbata;03:41;1
+喝茶;Pić herbatę;03:56;1
+你喝茶;Ty pijesz herbatę;04:26;1
+你好，我喝茶;Cześć, piję herbatę;04:56;1
+你喝茶吗？;Czy pijesz herbatę?;05:41;1
+是;Tak;06:26;1
+我喝茶;Piję herbatę;06:41;1
+是，我喝茶;Tak, piję herbatę;07:26;1
+喝红茶吗;Czy pić czarną herbatę?;08:26;1
+喝绿茶吗;Czy pić zieloną herbatę?;08:41;1
+我喝红茶;Piję czarną herbatę;08:56;1
+你喝红茶;Ty pijesz czarną herbatę;09:05;1
+我喝绿茶吗？;Czy ja piję zieloną herbatę?;09:26;1
+奶;Mleko;09:41;1
+想;Chcieć;10:11;1
+想喝;Chcieć pić;10:26;1
+想喝茶;Chcieć pić herbatę;10:56;1
+想喝绿茶;Chcieć pić zieloną herbatę;11:41;1
+我想喝红茶;Chcę pić czarną herbatę;11:56;1
+你想喝绿茶;Chcesz pić zieloną herbatę;12:11;1
+你想喝奶茶吗？;Czy chcesz pić herbatę mleczną?;12:26;1
+是，我想喝奶茶;Tak, chcę pić herbatę mleczną;13:02;1
+不;Nie;13:14;1
+我不喝茶;Nie piję herbaty;14:17;1
+你不喝茶;Ty nie pijesz herbaty;14:29;1
+你想;Ty chcesz;14:56;1
+我想喝;Chcę pić;15:17;1
+我不想喝;Nie chcę pić;15:32;1
+我想喝茶;Chcę pić herbatę;15:47;1
+不，我不想喝红茶;Nie, nie chcę pić czarnej herbaty;16:26;1
+奶茶;Herbata mleczna;16:41;1
+我想喝奶茶;Chcę pić herbatę mleczną;17:02;1
+什么;Co / Jaki;17:11;1
+什么茶;Jaka herbata;17:26;1
+什么奶;Jakie mleko;17:41;1
+你想喝红茶吗？;Czy chcesz pić czarną herbatę?;18:35;1
+不，我不想;Nie, nie chcę;18:50;1
+我不想喝红茶;Nie chcę pić czarnej herbaty;19:11;1
+不，我不想喝红茶，我想喝奶茶;Nie, nie chcę pić czarnej herbaty, chcę pić herbatę mleczną;19:38;1
+
+# ── Epizod 2 ──────────────────────────────────
+十块钱;Dziesięć juanów;20:35;2
+我想喝一杯红茶。;Chcę wypić filiżankę czarnej herbaty.;20:44;2
+再见;Do widzenia;20:59;2
+你想喝什么？;Co chcesz pić?;25:08;2
+我想喝茶;Chcę pić herbatę;25:23;2
+我想喝水;Chcę pić wodę;26:08;2
+吃;Jeść;26:14;2
+我吃;Ja jem;26:26;2
+你吃;Ty jesz;26:35;2
+你吃什么？;Co jesz?;26:44;2
+炒饭;Smażony ryż;27:08;2
+你想吃什么？;Co chcesz zjeść?;27:32;2
+吃炒饭;Jeść smażony ryż;27:44;2
+我想吃炒饭;Chcę zjeść smażony ryż;27:53;2
+你好;Cześć;28:08;2
+什么茶？;Jaka herbata?;29:08;2
+不，我想喝水;Nie, chcę pić wodę;29:38;2
+不，我不想喝茶，我想喝水;Nie, nie chcę pić herbaty, chcę pić wodę;30:17;2
+杯;Filiżanka;30:32;2
+一杯;Jedna filiżanka;30:56;2
+我想喝一杯水;Chcę wypić szklankę wody;32:38;2
+这;To;33:02;2
+这是一杯水;To jest szklanka wody;33:44;2
+这是一杯奶;To jest szklanka mleka;33:59;2
+你;Ty;34:29;2
+我的;Mój;34:53;2
+这是你的茶和炒饭;To jest twoja herbata i smażony ryż;35:47;2
+茶和奶;Herbata i mleko;36:17;2
+水和炒饭;Woda i smażony ryż;36:32;2
+我想喝茶和奶;Chcę pić herbatę i mleko;36:47;2
+我想喝一杯茶和一杯奶;Chcę wypić filiżankę herbaty i szklankę mleka;37:02;2
+谢谢;Dziękuję;37:17;2
+不客气;Nie ma za co;37:47;2
+多少钱？;Ile to kosztuje?;38:02;2
+十;Dziesięć;39:17;2
+一块钱;Jeden yuan;40:17;2
+你的;Twój;42:02;2
+这是你的钱;To są twoje pieniądze;42:32;2
+谢谢你;Dziękuję ci;42:47;2
+你好！你想喝什么？;Cześć! Co chcesz pić?;43:02;2

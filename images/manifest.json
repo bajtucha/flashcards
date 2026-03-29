@@ -5,7 +5,16 @@
     "gosia3.png",
     "gosia4.png",
     "us_history1.png",
-    "us_history2.png"
+    "us_history2.png",
+    "us_history3.png",
+    "us_history4.png",
+    "us_history5.png",
+    "us_history6.png",
+    "us_history7.png",
+    "us_history8.png",
+    "us_history9.png",
+    "us_history10.png",
+    "us_history11.png"
   ],
   "rewards": [
     { "prefix": "gosia",      "description": "Gosia" },
@@ -17,8 +26,19 @@
       "2": "https://www.youtube.com/watch?v=DDjWTWHHkpk&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=213",
       "3": "https://www.youtube.com/watch?v=fVDro8PY_bo&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=212"
     },
-    "french":    {},
-    "hungarian": {},
-    "chinese":   {}
+    "french":    {
+      "1": "https://www.youtube.com/watch?v=flS3MVNXWbw",
+      "2": "https://www.youtube.com/watch?v=EAX8mc_ovDk",
+      "3": "https://www.youtube.com/watch?v=__3sV6WTrK0"
+    },
+    "hungarian": {
+      "1": "https://www.youtube.com/watch?v=1oA1PkMwTpU",
+      "2": "https://www.youtube.com/watch?v=MXUZcbTgXRY",
+      "3": "https://www.youtube.com/watch?v=Q8CLoTb_GZ0"
+    },
+    "chinese":   {
+      "1": "https://www.youtube.com/watch?v=Gql5mU0OKB8",
+      "2": "https://www.youtube.com/watch?v=Gql5mU0OKB8"
+    }
   }
 }

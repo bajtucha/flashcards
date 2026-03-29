@@ -1,24 +1,269 @@
 # Format: oryginał;tłumaczenie;timestamp;epizod
 # Linie zaczynające się od # są ignorowane.
 
-# ── Epizod 1: Podstawowe zwroty ──────────────────────────────────
-Jó reggelt!;Dzień dobry (rano)!;;1
-Hogy hívják?;Jak Pan/Pani ma na imię?;;1
-Engem Péternek hívnak.;Mam na imię Péter.;;1
-Hol van a szálloda?;Gdzie jest hotel?;;1
-Mennyibe kerül?;Ile to kosztuje?;;1
-Nem értem.;Nie rozumiem.;;1
-Kérek szépen egy kávét.;Poproszę kawę.;;1
-Hány óra van?;Która jest godzina?;;1
-Köszönöm szépen.;Bardzo dziękuję.;;1
-Szívesen.;Nie ma za co.;;1
-Hol a legközelebbi patika?;Gdzie jest najbliższa apteka?;;1
-Beszél angolul?;Czy mówi Pan/Pani po angielsku?;;1
-Kérem a számlát.;Poproszę o rachunek.;;1
-Van szabad szobájuk?;Czy mają Państwo wolny pokój?;;1
-Mikor indul a busz?;Kiedy odjeżdża autobus?;;1
-Segítene nekem?;Czy mógłby Pan/Pani mi pomóc?;;1
-Finom az étel!;Jedzenie jest smaczne!;;1
-Kérek egy pohár vizet.;Poproszę szklankę wody.;;1
-Lassabban kérem!;Proszę mówić wolniej!;;1
-Viszontlátásra!;Do widzenia!;;1
+# ── Epizod 1: Where do you want to travel? ──────────────────────────────────
+Sziasztok, Bettina vagyok Budapestről.;Cześć, jestem Bettina z Budapesztu.;0:00;1
+és a mai kérdésünk az utca emberének,;a nasze dzisiejsze pytanie do ludzi na ulicy,;0:03;1
+Hová szeretnél utazni?;Dokąd chciałbyś pojechać?;0:19;1
+Szia! Az lenne a kérdésem hozzád, hogy hova szeretnél elutazni?;Cześć! Chciałam zapytać, dokąd chciałbyś pojechać?;0:23;1
+Oda is szeretnék menni, de amúgy nagy vágyam, hogy Londonba utazzak,;Chciałbym też tam pojechać, ale moim większym marzeniem jest wizyta w Londynie,;0:27;1
+és lakjak is ott éveket, ha lehet.;i zamieszkanie tam na lata, jeśli to możliwe.;0:31;1
+És ha szabad megkérdeznem, akkor Berlinnek mi lenne a célja.;Czy mogę zapytać, jaki byłby cel wyjazdu do Berlina?;0:35;1
+Tehát inkább nyaralás típusú vagy munka?;Czyli bardziej wakacje czy praca?;0:39;1
+Egy sales hacking tréning lesz ott a Climate-KIC nevű accelerator program keretében.;To szkolenie ze sprzedaży w ramach programu akceleracyjnego Climate-KIC.;0:43;1
+Most ehhez internet kell, hogy le tudjam fordítani.;Teraz potrzebuję internetu, żeby to przetłumaczyć.;0:51;1
+Létezik az Európai Unióban egy nagyon támogatott projekt.;W Unii Europejskiej istnieje bardzo wspierany projekt.;0:55;1
+Startup cégeket támogatnak sok pénzzel, illetve oktatással,;Wspierają startupy dużymi pieniędzmi i szkoleniami,;0:59;1
+és ennek a keretében megyek oda tanulni.;i w ramach tego jadę tam się uczyć.;1:03;1
+Nagyon hosszú táv lesz. Három nap.;To będzie bardzo długo. Trzy dni.;1:07;1
+Akkor, akkor nem. Akkor röviden megoldod.;No to nie. To szybko to załatwisz.;1:11;1
+De ezt nem tudom, hogy miért.;Ale nie wiem dlaczego.;1:15;1
+És szeretnék elutazni Delhibe. Lehetőleg februárban.;I chciałbym pojechać do Delhi. Najlepiej w lutym.;1:19;1
+Az nyáron van, egy két napos rendezvény.;To jest latem, dwudniowe wydarzenie.;1:23;1
+A világ legnagyobb vegetáriánus találkozója.;To największy festiwal wegetariański na świecie.;1:27;1
+Hát, igazából engem Anglia vonz nagyon,;Właściwie to Anglia mnie bardzo przyciąga,;1:31;1
+az nekem ilyen nagyon dallamos,;dla mnie to jest bardzo melodyjne,;1:35;1
+és vonzanak ezek a vörös téglás házak,;i przyciągają mnie te czerwone ceglane domy,;1:39;1
+Hát, leginkább Olaszországba szeretnénk,;Cóż, najbardziej chcielibyśmy do Włoch,;1:47;1
+én tanulok olaszul, és nagyon szeretjük a tengert.;uczę się włoskiego i oboje kochamy morze.;1:51;1
+És esetleg a párodat? Mi vonzza leginkább?;A twój chłopak? Co go najbardziej przyciąga?;1:55;1
+Engem is Olaszország vonz. Négy évig én is tanultam olaszul,;Mnie też przyciągają Włochy. Przez cztery lata też uczyłem się włoskiego,;2:03;1
+Úgyhogy nem hiába vagyunk egy pár.;Więc nie bez powodu jesteśmy parą.;2:07;1
+Na, az nagyszerű. És esetleg munka, valami Olaszországban? Dolgozni kint?;To świetnie. A może praca we Włoszech? Praca za granicą?;2:11;1
+Én most a Studio Italiánál dolgozom mint angol-német szakos tanár,;Pracuję teraz w Studio Italia jako nauczyciel języka angielskiego i niemieckiego,;2:19;1
+tehát nem lehetetlen, hogy kint is fogok valamit keresni magamnak.;więc nie jest niemożliwe, że znajdę sobie coś za granicą.;2:23;1
+Szia, lenne egy olyan kérdésem, hogy hova szeretnél elutazni.;Cześć, chciałam zapytać, dokąd chciałbyś pojechać.;2:35;1
+Indonéziába, illetve Délkelet-Ázsiába.;Do Indonezji i Azji Południowo-Wschodniej.;2:39;1
+Azért, mert a többi kontinens nagy részén már voltam,;Dlatego, że byłem już na większości innych kontynentów,;2:43;1
+és ott videóblogot készíteni.;i kręcić tam vlogi.;2:47;1
+Az ottaniak életéről, a kultúráról, különbségekről,;O życiu tamtejszych ludzi, kulturze, różnicach,;2:51;1
+Én Tokelau szigetére szeretnék elutazni.;Chciałbym pojechać na wyspy Tokelau.;2:59;1
+Ez valahol Új-Zéland és az amerikai kontinens között van,;To gdzieś między Nową Zelandią a kontynentem amerykańskim,;3:03;1
+úgy Új-Zélandhoz közelebb, és Új-Zélandhoz tartozik egyébként,;bliżej Nowej Zelandii, i właściwie należy do Nowej Zelandii,;3:07;1
+és II. Erzsébet a királynő.;a Elżbieta II jest królową.;3:11;1
+Hú, nagyon sok mindent tudsz róla, és hogyhogy ez a különleges célpont?;Wow, dużo o tym wiesz, dlaczego to jest tak szczególny cel?;3:15;1
+hogy itt fogy a leggyorsabban a népesség az egész Földön,;że tu najszybciej spada liczba ludności na całej Ziemi,;3:19;1
+és egyébként most ilyen 1200-an élnek ott,;i teraz mieszka tam około 1200 osób,;3:23;1
+azt hiszem, három korallzátonyról beszélünk.;myślę, że mówimy o trzech atolach.;3:27;1
+És igazából nemcsak oda szeretnék utazni,;I tak naprawdę nie tylko chcę tam pojechać,;3:31;1
+Akkor hosszú távra is esetleg terveznéd, hogy...?;Czy planowałbyś więc na dłużej, że...?;3:35;1
+Akkor hosszabb távra is terveznéd esetleg, hogy elutazol oda, és ott élsz.;Czy planowałbyś na dłużej, że pojedziesz tam i będziesz tam żył?;3:39;1
+Igen, igen.;Tak, tak.;3:43;1
+Akkor nagyon sok sikert kívánok hozzá a továbbiakban,;Życzę ci wtedy dużo powodzenia,;3:45;1
+illetve hogy kijuss oda, és akár ott is élhess.;i żebyś dotarł tam i mógł tam mieszkać.;3:47;1
+Szeretnék utazni Hollandiába, mert ott a családom,;Chciałbym pojechać do Holandii, bo tam jest moja rodzina,;3:53;1
+és már nem láttam őket karácsony, múlt karácsony óta.;i nie widziałem ich od Bożego Narodzenia, od zeszłorocznych świąt.;3:55;1
+Úgy hallom, hogy te nem vagy eredeti magyar.;Słyszę, że nie jesteś rodowitym Węgrem.;4:05;1
+Hollandiából jöttél, igaz?;Przyjechałeś z Holandii, prawda?;4:09;1
+utazni;podróżować;0:19;1
+elutazni;pojechać / wyruszyć w podróż;0:23;1
+szeretnék;chciałbym / chciałabym;0:27;1
+vágyam;moje marzenie / pragnienie;0:27;1
+célja;cel;0:35;1
+nyaralás;wakacje;0:39;1
+munka;praca;0:39;1
+fordítani;tłumaczyć;0:51;1
+támogatott;wspierany;0:55;1
+tanulni;uczyć się;1:03;1
+hosszú;długi;1:07;1
+röviden;krótko;1:11;1
+rendezvény;wydarzenie / impreza;1:23;1
+világ;świat;1:27;1
+legnagyobb;największy;1:27;1
+vonz;przyciąga;1:31;1
+dallamos;melodyjny;1:35;1
+tenger;morze;1:51;1
+pár;para;2:07;1
+dolgozni;pracować;2:11;1
+tanár;nauczyciel;2:19;1
+kontinens;kontynent;2:43;1
+kultúra;kultura;2:51;1
+különbség;różnica;2:51;1
+sziget;wyspa;2:59;1
+királynő;królowa;3:11;1
+népesség;ludność / populacja;3:19;1
+Föld;Ziemia;3:19;1
+korallzátony;atol koralowy;3:27;1
+terveznéd;planowałbyś;3:35;1
+sikert kívánok;życzę powodzenia;3:45;1
+család;rodzina;3:53;1
+karácsony;Boże Narodzenie;3:55;1
+eredeti;rodowity / oryginalny;4:05;1
+
+# ── Epizod 2: What would you do if you were almighty? ──────────────────────────────────
+Tehát az lenne a kérdésem, hogyha mindenható lehetnél,;Więc moje pytanie byłoby: gdybyś był wszechmocny,;0:21;2
+akkor mi lenne az első dolog, amit változtatnál a világban.;jaka byłaby pierwsza rzecz, którą zmieniłbyś na świecie.;0:25;2
+Hát ez egy nagyon jó kérdés.;No cóż, to jest bardzo dobre pytanie.;0:29;2
+Szerintem az lenne a legjobb,;Myślę, że najlepsze byłoby,;0:31;2
+hogyha mindenki ugyanazon a nyelven beszélne,;gdyby wszyscy mówili tym samym językiem,;0:33;2
+mert megkönnyítené a társas érintkezést a világban.;bo to ułatwiłoby komunikację na świecie.;0:37;2
+Főleg, hogy most ez a célja ennek a videónak is.;Zwłaszcza, że to jest właśnie cel tego wideo.;0:45;2
+amit lehetne használni?;który można by używać?;0:49;2
+Vagy melyik lenne az a könnyű nyelv, amit te választanál,;Albo który łatwy język byś wybrał,;0:53;2
+hogy azt használja mindenki?;żeby go używali wszyscy?;0:55;2
+Hát, nyilván közelebb esik hozzám a magyar,;Cóż, węgierski jest mi bliższy,;0:59;2
+Én az angolt választanám.;Ja wybrałbym angielski.;1:01;2
+Az a kérdésem, hogyha mindenható lennél,;Moje pytanie jest: gdybyś był wszechmocny,;1:05;2
+akkor mi lenne az első dolog, amin változtatnál a világban.;jaka byłaby pierwsza rzecz, którą zmieniłbyś na świecie.;1:07;2
+Hát, az én életemben a legnagyobb,;No cóż, w moim życiu największym,;1:11;2
+legmeghatározóbb pillanat az volt,;najbardziej przełomowym momentem było,;1:13;2
+amikor megismert Istent, így a keresztény Istent.;kiedy poznałam Boga, chrześcijańskiego Boga.;1:15;2
+És hogy, őt szeretném, hogyha minél több ember megismerné,;I chciałabym, żeby jak najwięcej ludzi Go poznało,;1:21;2
+mert ahogy az én életemet megváltoztatta,;bo tak jak zmienił moje życie,;1:25;2
+az fantasztikus, ahogy...;to było fantastyczne, jak...;1:27;2
+amilyen változásokat hozott létre.;jakie zmiany wprowadził.;1:29;2
+És annyira szeretném, hogyha minél több ember;I tak bardzo bym chciała, żeby jak najwięcej ludzi;1:33;2
+ezt így megtanulhatná vagy;mogło się tego nauczyć lub;1:35;2
+... megtudhatná, hogy létezik ez a fajta szeretet,;... dowiedziało się, że istnieje ten rodzaj miłości,;1:39;2
+ez a fajta elfogadás.;ten rodzaj akceptacji.;1:41;2
+Tehát, ha mindenható lennél,;Więc gdybyś był wszechmocny,;1:43;2
+akkor mi lenne az első dolog, amin változtatnál a világban?;jaka byłaby pierwsza rzecz, którą zmieniłbyś na świecie?;1:45;2
+Hát, az emberek hozzáállását.;Cóż, nastawienie ludzi.;1:49;2
+Azt, hogy egy kicsit pozitívabbak legyenek.;To, żeby byli trochę bardziej pozytywni.;1:53;2
+Talán lehet, hogy a magyar mentalitásból fakadóan gondolom ezt.;Może to wynika z węgierskiej mentalności, że tak myślę.;1:55;2
+Tehát akkor úgy gondolod, hogy azért nem mindenki ilyen nyilván,;Więc myślisz, że oczywiście nie wszyscy są tacy (negatywni),;1:59;2
+tehát ez nem csak egy magyar sajátosság,;więc to nie jest cecha charakterystyczna tylko dla Węgrów,;2:01;2
+de ezt az egész világra ki lehetne terjeszteni?;ale można by to rozszerzyć na cały świat?;2:03;2
+Én most így kivetítem az egész világra,;Tak, rzutuję to na cały świat,;2:07;2
+mert ugye ebben a közegben szocializálódtam, úgyhogy ezt gondolom.;bo właśnie w takim środowisku się wychowałam, więc tak myślę.;2:09;2
+Szia, cica! Ha mindenható lennél,;Cześć, kotku! Gdybyś był wszechmocny,;2:15;2
+akkor mi lenne az első dolog, amit változtatnál a világban?;jaka byłaby pierwsza rzecz, którą zmieniłbyś na świecie?;2:17;2
+Tehát, akkor szeretnék tőled is megkérdezni,;Więc chciałabym też zapytać ciebie:;2:23;2
+hogyha mindenható lennél, akkor mi lenne az első dolog,;gdybyś był wszechmocny, jaka byłaby pierwsza rzecz,;2:25;2
+amit megváltoztatnál a világban?;którą zmieniłbyś na świecie?;2:29;2
+Az első dolog, amit megváltoztatnék ezen a hatalmas nagy világon:;Pierwszą rzeczą, którą zmieniłbym w tym ogromnym świecie:;2:31;2
+építenék egy Halálcsillagot,;zbudowałbym Gwiazdę Śmierci,;2:35;2
+és fénykardot a világnak, fénykardot az embereknek.;i rozdałbym miecze świetlne światu, miecze świetlne ludziom.;2:37;2
+De hát, akkor az egész világ csak egy nagy poén lenne, nem?;Ale wtedy cały świat byłby jednym wielkim żartem, prawda?;2:39;2
+Fénykarddal?;Z mieczem świetlnym?;2:43;2
+Hát, mert nem poénos a fénykard? Az veszélyes?;No bo miecz świetlny nie jest zabawny? Jest niebezpieczny?;2:45;2
+A fénykard az nem poénos, a fénykard az király.;Miecz świetlny nie jest zabawny, miecz świetlny jest odlotowy.;2:49;2
+Szóval az egész világ király lenne.;Więc cały świat byłby odlotowy.;2:51;2
+De egyébként, ha komolyra fordítjuk a szót, akkor olcsóbb sört.;Ale tak poważnie, to tańsze piwo.;2:53;2
+Olcsóbb sört.;Tańsze piwo.;2:57;2
+Köszönöm szépen!;Dziękuję bardzo!;3:01;2
+Viszont több olyan okos ember, mint amilyenek egyébként ti vagytok,;Potrzeba też więcej mądrych ludzi takich jak wy,;3:03;2
+azért az szerintem bőven elkélne ezen a földön.;myślę, że tacy bardzo by się przydali na tej ziemi.;3:07;2
+Sok mindent megváltoztatnék, de az első az az lenne;Zmieniłabym dużo rzeczy, ale pierwszą byłoby;3:13;2
+hogy koalákat telepítenék Európába.;zasiedlenie Europy koalami.;3:15;2
+Koalákat? Talán az a kedvenc állatod?;Koale? Czy to przypadkiem twoje ulubione zwierzę?;3:17;2
+Abszolút a kedvenc állatom, igen.;Absolutnie moje ulubione zwierzę, tak.;3:19;2
+És mit szeretsz bennük annyira?;I co tak bardzo w nich lubisz?;3:21;2
+Hát, nézz rájuk, tündériek egyszerűen, és fantasztikus kis lények.;No, po prostu na nie popatrz, są jak wróżki, fantastyczne małe stworzenia.;3:23;2
+Teljesen életképtelenek, és;Są kompletnie bezradne, i;3:27;2
+egyszerűen imádom őket.;po prostu je uwielbiam.;3:29;2
+Mi lenne az a dolog,;Jaka byłaby ta rzecz,;3:31;2
+amit megváltoztatnál a világban, hogyha mindenható lehetnél?;którą zmieniłabyś na świecie, gdybyś była wszechmocna?;3:33;2
+Hát, először is az emberek félelmeit venném el,;Cóż, przede wszystkim zabrałabym ludziom ich lęki,;3:37;2
+hogyha a legfontosabb dologról lenne szó,;jeśli chodzi o najważniejszą rzecz,;3:39;2
+mert úgy gondolom, hogy talán ez a legnagyobb dolog,;bo myślę, że to być może jest najważniejsza rzecz,;3:41;2
+boldogulni, továbblépni, és merni élni.;radzić sobie, iść naprzód i odważyć się żyć.;3:47;2
+Én így gondolom.;Tak właśnie myślę.;3:51;2
+mindenható;wszechmocny;0:21;2
+változtatnál;zmieniłbyś;0:25;2
+kérdés;pytanie;0:29;2
+legjobb;najlepszy;0:31;2
+nyelv;język;0:33;2
+megkönnyítené;ułatwiłoby;0:37;2
+érintkezés;komunikacja / kontakt;0:37;2
+célja;cel;0:45;2
+választanál;wybrałbyś;0:53;2
+közelebb;bliżej;0:59;2
+meghatározó;przełomowy / decydujący;1:13;2
+pillanat;moment / chwila;1:13;2
+Isten;Bóg;1:15;2
+megváltoztatta;zmienił;1:25;2
+változás;zmiana;1:29;2
+szeretet;miłość;1:39;2
+elfogadás;akceptacja;1:41;2
+hozzáállás;nastawienie / postawa;1:49;2
+pozitív;pozytywny;1:53;2
+mentalitás;mentalność;1:55;2
+sajátosság;cecha charakterystyczna;2:01;2
+szocializálódtam;wychowałam się / socjalizowałam się;2:09;2
+cica;kotek;2:15;2
+fénykard;miecz świetlny;2:35;2
+Halálcsillag;Gwiazda Śmierci;2:35;2
+poén;żart;2:39;2
+király;odlotowy / super (slang);2:49;2
+olcsóbb;tańszy;2:53;2
+sör;piwo;2:57;2
+okos;mądry / sprytny;3:03;2
+kedvenc;ulubiony;3:17;2
+állat;zwierzę;3:17;2
+tündér;wróżka;3:23;2
+életképtelen;bezradny / niezdolny do życia;3:27;2
+félelem;strach / lęk;3:37;2
+boldogulni;radzić sobie;3:47;2
+továbblépni;iść naprzód;3:47;2
+
+# ── Epizod 3: Christmas handycraft ──────────────────────────────────
+Éppen egy kollégiumban vagyok, aminek a földszintjén;Właśnie jestem w akademiku, na którego parterze;0:05;3
+egy kézműves műhely zajlik.;odbywa się warsztat rękodzielniczy.;0:07;3
+Karácsonyi kézműves műhely;Bożonarodzeniowy warsztat rękodzielniczy;0:23;3
+Köszöntök mindenkit ezen a kézműves foglalkozáson!;Witam wszystkich na tych zajęciach rękodzielniczych!;0:25;3
+Nagyon sok ötletet hoztunk,;Przynieśliśmy dużo pomysłów,;0:29;3
+de nagyon sok ötletet loptunk.;ale też dużo pomysłów ukradliśmy.;0:31;3
+Hogy honnan? Pinterest.;Skąd? Z Pinteresta.;0:33;3
+Ajánlom mindenkinek.;Polecam wszystkim.;0:35;3
+Ajánlom, hogy nemcsak karácsonykor,;Polecam, żeby nie tylko na Boże Narodzenie,;0:39;3
+hanem ha barátotoknak, barátnőtöknek születésnapja, névnapja van,;ale jeśli wasz chłopak lub dziewczyna ma urodziny lub imieniny,;0:43;3
+és szeretnétek egyszerűen, kis helyes módon becsomagolni,;i chcielibyście to po prostu ładnie zapakować,;0:47;3
+akkor itt egy ötlet.;to mamy tu pewien pomysł.;0:51;3
+Itt már csak a fantázia szab határt.;Tu jedynym ograniczeniem jest wyobraźnia.;0:55;3
+Kár, hogy nem érződik az illata,;Szkoda, że nie czuć zapachu,;0:57;3
+de a lányok szerintem igazolnak,;ale dziewczyny myślę potwierdzą,;0:59;3
+hogy a mézeskalácsnak már milyen jó illata van.;że piernik już tak pięknie pachnie.;1:01;3
+Éppen egy ilyen kis mécsest készítek;Właśnie robię taki mały świecznik;1:05;3
+a kolis polcomra.;na moją półkę w akademiku.;1:09;3
+Azért, mert szeretek ilyen dolgokkal foglalkozni,;Dlatego, że lubię zajmować się takimi rzeczami,;1:11;3
+illetve otthon is szoktam a lakásomban készíteni hasonló dolgokat.;i w domu też zwykłam robić podobne rzeczy w swoim mieszkaniu.;1:15;3
+Mit mondjak még? Ki lesz vágva?;Co jeszcze mam powiedzieć? Będzie wycięte?;1:21;3
+Sziasztok, hi!;Cześć, hej!;1:25;3
+Elkérhetem a ragasztót?;Czy mogę pożyczyć klej?;1:29;3
+Ezt levágom.;To ucinam.;1:41;3
+(Nem vagyok ideges. Nem vagyok ideges, csak szar.);(Nie jestem zdenerwowana. Nie jestem zdenerwowana, to po prostu do niczego.);1:43;3
+Várjál.;Poczekaj.;1:47;3
+(Idén is rájöttem, hogy nem tudok csinálni semmi ilyesmit.);(W tym roku też uświadomiłam sobie, że nie potrafię nic takiego zrobić.);1:49;3
+Aj, ez nem jó.;Oj, to nie jest dobre.;1:53;3
+Ja, hogy most izé, meg leszek interjúvolva?;No to teraz, no wiesz, będę przesłuchiwana?;1:57;3
+Ebbe már lehet rakni dugipiát, nem?;Do tego można już włożyć ukryty alkohol, nie?;1:59;3
+Ja, van benne most egy laposüveg?;No, jest w tym teraz piersiówka?;2:03;3
+Nem, nem, nem. Nem fér bele.;Nie, nie, nie. Nie mieści się.;2:05;3
+Itt ki kéne tölteni valamivel a teret.;Tutaj trzeba by czymś wypełnić tę przestrzeń.;2:07;3
+Megfogom, oszt...;Trzymam i...;2:11;3
+Mondjuk lehet, hogy boldog lesz az emberke karácsonykor, hogyha beleszagol.;Powiedzmy, że ten człowieczek będzie szczęśliwy na Boże Narodzenie, jak to powącha.;2:13;3
+Zacskóban add át!;Wręcz to w torebce foliowej!;2:19;3
+Nem tudsz csákót hajtogatni?;Nie potrafisz złożyć papierowej czapki?;2:45;3
+Hát, úgy látom, te se nagyon.;No cóż, widzę, że ty też za bardzo nie.;2:47;3
+kollégium;akademik;0:05;3
+kézműves;rękodzielniczy;0:07;3
+műhely;warsztat;0:07;3
+foglalkozás;zajęcia;0:25;3
+ötlet;pomysł;0:29;3
+loptunk;ukradliśmy;0:31;3
+ajánlom;polecam;0:35;3
+karácsony;Boże Narodzenie;0:39;3
+születésnap;urodziny;0:43;3
+névnap;imieniny;0:43;3
+becsomagolni;zapakować;0:47;3
+fantázia;wyobraźnia;0:55;3
+határ;granica / ograniczenie;0:55;3
+illat;zapach;0:57;3
+mézeskalács;piernik;1:01;3
+mécses;świecznik / lampka;1:05;3
+polc;półka;1:09;3
+foglalkozni;zajmować się;1:11;3
+lakás;mieszkanie;1:15;3
+ragasztó;klej;1:29;3
+levágom;ucinam;1:41;3
+ideges;zdenerwowany;1:43;3
+várjál;poczekaj;1:47;3
+dugipái;ukryty alkohol (slang);1:59;3
+laposüveg;piersiówka;2:03;3
+tér;przestrzeń / miejsce;2:07;3
+boldog;szczęśliwy;2:13;3
+zacskó;torebka foliowa;2:19;3
+csákó;papierowa czapka;2:45;3
+hajtogatni;składać (origami/papier);2:45;3
+
