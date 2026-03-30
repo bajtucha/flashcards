@@ -4,6 +4,8 @@
     "gosia2.png",
     "gosia3.png",
     "gosia4.png",
+    "gosia5.png",
+    "gosia6.png",
     "us_history1.png",
     "us_history2.png",
     "us_history3.png",
@@ -24,7 +26,8 @@
     "english": {
       "1": "https://www.youtube.com/watch?v=6L-zHNdy288&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=216",
       "2": "https://www.youtube.com/watch?v=DDjWTWHHkpk&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=213",
-      "3": "https://www.youtube.com/watch?v=fVDro8PY_bo&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=212"
+      "3": "https://www.youtube.com/watch?v=fVDro8PY_bo&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=212",
+      "4": "https://www.youtube.com/watch?v=TFRAjJpP0HE&list=PLA5UIoabheFM281dIr4ojw9xOVoo9dOtw&index=211"
     },
     "french":    {
       "1": "https://www.youtube.com/watch?v=flS3MVNXWbw",
